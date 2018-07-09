@@ -31,7 +31,7 @@ This pipelines features:
 
 * **Automatic speech recognition** (kaldi.pipeline)
 
-	1. Run ARIA's virtual machine (see [/Agent-Input/kaldi/README.md](../../../kaldi/README.md))
+	1. Run ARIA's virtual machine (see [`/Agent-Input/kaldi/README.md`](../../../kaldi/README.md))
 	2. Open [`asrkaldi.pipeline-config`](../asrkaldi/asrkaldi.pipeline-config) and set the ip of the virtual machine
 	
 	To run one of the following configurations:

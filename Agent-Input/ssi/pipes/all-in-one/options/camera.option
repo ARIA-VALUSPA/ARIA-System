@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<options>
+    <item name="apply" type="BOOL" num="1" value="true" lock="true" help="Apply changes from graphical dialog?" />
+    <item name="device" type="CHAR" num="1024" value="\\?\usb#vid_06f8&pid_3017&mi_00#6&2386fcbf&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\global" lock="true" help="Name of camera device (if empty a selection dialog will be shown)." />
+    <item name="codec" type="CHAR" num="1024" value="None" lock="true" help="Name of compression filter ('None' for none)." />
+    <item name="width" type="INT" num="1" value="352" lock="true" help="Width in pixel." />
+    <item name="height" type="INT" num="1" value="288" lock="true" help="Height in pixel." />
+    <item name="fps" type="DOUBLE" num="1" value="2.500000e+01" lock="true" help="Frame rate per seconds." />
+    <item name="subtype" type="CHAR" num="1024" value="{47504A4D-0000-0010-8000-00AA00389B71}" lock="true" help="Name of mediasubtype (if empty a selection dialog will be shown)." />
+    <item name="channel" type="INT" num="1" value="3" lock="true" help="Number of channels." />
+    <item name="depth" type="INT" num="1" value="8" lock="true" help="Depth in bits per channel." />
+    <item name="closestFps" type="BOOL" num="1" value="true" lock="true" help="Use closest frame rate?" />
+    <item name="flip" type="BOOL" num="1" value="false" lock="true" help="Flip camera image" />
+    <item name="mirror" type="BOOL" num="1" value="false" lock="true" help="mirror video image" />
+</options>

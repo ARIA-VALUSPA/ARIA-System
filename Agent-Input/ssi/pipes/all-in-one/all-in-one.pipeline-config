@@ -10,7 +10,7 @@ camera:fps = 25
 
 # logging
 
-log:use  	=false
+log:use  	=true
 log:dir 	= log
 
 # output

@@ -8,11 +8,11 @@ sync:notify:url = udp://255.255.255.255:2222		# url to send notifications
 
 # logging
 
-log:use  	=false
+log:use  	=true
 log:dir 	= log
 log:role:user = user
 log:role:agent = agent
-log:screen  =false
+log:screen  =true
 log:screen:region=-1080,0,1080,1920
 log:screen:width=540
 log:screen:height=960

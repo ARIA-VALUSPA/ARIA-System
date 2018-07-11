@@ -35,7 +35,7 @@ mode:
     used to select the ASR mode. It may be "inc" for incremental ASR. Here, The decoded
     output starts directly when speech starts and changes over time as more speech is
     received. When the utterance ends (i.e. end-point is detected), the decoded output
-    is refined once more to the final decoded utterance and outout to a separate line,
+    is refined once more to the final decoded utterance and output to a separate line,
     then the server waits for the next utterance. Initial tests show that performing
     the end-point detection as a part of this binary by using "--epoint true" is better
     in this case. The other mode is "utt". Here, either 1- or n-best sentences are output

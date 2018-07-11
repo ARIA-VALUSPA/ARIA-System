@@ -1,32 +1,76 @@
 <xml>
-	<process language="C" class="..\..\Agent-Input\ssi\bin\xmlpipe.exe" cwd="..\..\Agent-Input\ssi\pipes\all-in-one" name="SSI Pipeline">
+	<process
+	language="C"
+	class="..\..\Agent-Input\ssi\bin\xmlpipe.exe"
+	cwd="..\..\Agent-Input\ssi\pipes\all-in-one"
+	name="SSI Pipeline">
 		<parameter>-config</parameter>
-		<parameter>all-in-one</parameter> 
+		<parameter>all-in-one</parameter>
 		<parameter>-debug</parameter>
 		<parameter>ssi.log</parameter>
 		<parameter>all-in-one</parameter>
-		<config file="..\..\Agent-Input\ssi\pipes\all-in-one\asrkaldi.pipeline-config" key="asr:host" separator="=" info="IP of the ASR machine" />
-		<config file="..\..\Agent-Input\ssi\pipes\all-in-one\asrkaldi.pipeline-config" key="asr:port" separator="=" info="Port used by the ASR" />
-		<config file="..\..\Agent-Input\ssi\pipes\all-in-one\asrkaldi.pipeline-config" key="vad:threshold" separator="=" info="Threshold for voice activity detection" />
-		<config file="..\..\Agent-Input\ssi\models\face\caffe.cfg" key="mode" separator=" " info="Switch between CPU and GPU classification">
+
+		<config
+		file="..\..\Agent-Input\ssi\pipes\all-in-one\asrkaldi.pipeline-config"
+		key="asr:host"
+		separator="="
+		info="IP of the ASR machine" />
+
+		<config
+		file="..\..\Agent-Input\ssi\pipes\all-in-one\asrkaldi.pipeline-config"
+		key="asr:port"
+		separator="="
+		info="Port used by the ASR" />
+
+		<config
+		file="..\..\Agent-Input\ssi\pipes\all-in-one\asrkaldi.pipeline-config"
+		key="vad:threshold"
+		separator="="
+		info="Threshold for voice activity detection" />
+
+		<config
+		file="..\..\Agent-Input\ssi\models\face\caffe.cfg"
+		key="mode"
+		separator=" "
+		info="Switch between CPU and GPU classification">
 			<option default="True">GPU</option>
 			<option>CPU</option>
 		</config>
+
 	</process>
-	
-	<process language="java" class="Agent-Output.jar" cwd="..\..\Agent-Output\bin" name="Agent Window">
-		<config file="..\..\Agent-Output\bin\Agent-Output.ini" key="Environment" separator=" = " info="Select Greta environment">
+
+	<process
+	language="java"
+	class="Agent-Output.jar"
+	cwd="..\..\Agent-Output\bin"
+	name="Agent Window">
+		<config
+		file="..\..\Agent-Output\bin\Agent-Output.ini"
+		key="Environment"
+		separator=" = "
+		info="Select Greta environment">
 			<option>./empty.xml</option>
 			<option>./environment-ARIADemo1.xml</option>
 			<option default="True">./environment-ARIADemo2.xml</option>
 		</config>
-		<config file="..\..\Agent-Output\bin\Agent-Output.ini" key="WhiteBoard.visible" separator=" = " info="Show ActiveMQ windows for Greta">
+
+		<config
+		file="..\..\Agent-Output\bin\Agent-Output.ini"
+		key="WhiteBoard.visible"
+		separator=" = "
+		info="Show ActiveMQ windows for Greta">
 			<option>true</option>
 			<option default="True">false</option>
 		</config>
-		<config file="..\..\Agent-Output\bin\Agent-Output.ini" key="System.animEngine" separator=" = " info="Switch animation engine">
+
+		<config
+		file="..\..\Agent-Output\bin\Agent-Output.ini"
+		key="System.animEngine"
+		separator=" = "
+		info="Switch animation engine">
 			<option default="True">GRETA</option>
 			<option>LIVING-ACTOR</option>
 		</config>
+
 	</process>
 </xml>

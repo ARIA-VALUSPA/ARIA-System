@@ -5,7 +5,9 @@ Peter LaValle @ gmail.com
 This will be the public AVP3.0.1 release.
 Currently; the downloaded models are not ignored
 
-
+---------
+readmeedit
+------
 ## Update from 3.0 to 3.0.1
 
 If you installed the project by checking it out from GitHub, upgrading from 3.0 to 3.0.1 should be possible if you;

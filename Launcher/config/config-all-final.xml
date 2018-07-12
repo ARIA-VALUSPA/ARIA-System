@@ -76,7 +76,7 @@
 		file="..\..\Agent-Input\ssi\pipes\all-in-one-final\all-in-one-final.pipeline-config"
 		key="log:screen:region"
 		separator="="
-		info="VIDEO region to record (top,lef,width,height)" />
+		info="VIDEO region to record (top,left,width,height)" />
 
 		<config
 		file="..\..\Agent-Input\ssi\pipes\all-in-one-final\all-in-one-final.pipeline-config"

@@ -1,7 +1,6 @@
-
-Devon Fazekas
-2018-07-05
-
+-------------------------------------------------
+Devon Fazekas, <fazekade@sheridancollege.ca>, 05.07.2018
+-------------------------------------------------
 
 ## Config File Breakdowns
 
@@ -27,7 +26,7 @@ The following analysis of the below Config Files is simply my interpretation bas
 ##### Description:
 Starts all components except ASR (Automated Speech Recognition).
 
-	
+
 ### [stayed] config-all.xml
 
 ##### Includes:
@@ -51,7 +50,7 @@ Starts all components except ASR (Automated Speech Recognition).
 ##### Description:
 Starts all components.
 
-	
+
 ### [gone] config-core.xml
 
 ##### Includes:
@@ -163,3 +162,5 @@ Starts only the Dialogue Manager using the Agent-Core.
 
 ##### Description:
 ...
+
+-------------------------------------------------

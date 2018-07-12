@@ -1,19 +1,25 @@
 -------------------------------------------------
 Johannes Wagner, <wagner@hcm-lab.de>, 12.11.2015
+
+Devon Fazekas, <fazekade@sheridancollege.ca>, 12.07.2018
+
 -------------------------------------------------
 
-Age and gender classification either from a microphone or using input from a file
+Age and gender classification is accomplished by either a microphone or input from a file.
 
-To configure the pipeline open 'agender.pipeline-config' in a text editor
+-------------------------------------------------
 
-To change the output format of the pipeline open 'agender.xml' in a text editor
+## Configuration
 
-To run the pipeline execute AGENDER.bat
+To **configure the pipeline** edit [`agender.pipeline-config`](agender.pipeline-config).
 
-To test ActiveMQ connection run AGENDER_RECV.bat
+To **change the output format** of the pipeline edit [`agender.pipeline-config`](agender.pipeline-config).
 
--------------------------------------------------------------
+To **run the pipeline** execute [`AGENDER.bat`](AGENDER.bat).
 
-To record videos of screen/user execute AGENDER_RECORD.bat, recorded files will be stored in capture/ (see camera.png how to set up camera)
+To **test ActiveMQ connection** run [`AGENDER_RECV.bat`](AGENDER_RECV.bat).
+
+To **record videos** of screen/user execute [`AGENDER_RECORD.bat`](AGENDER_RECORD.bat).
+Recorded files will be stored in [`capture/`](capture/) (see [`camera.png`](docs/camera.png) for how to set up camera).
 
 -------------------------------------------------

@@ -142,3 +142,9 @@ linux $ ./launch.sh
 [cuBLAS]: https://developer.nvidia.com/cublas
 
 -------------------------------------------------
+
+## Instructions
+
+1. Read the [`README`](ASR/readme.md) within the `ASR/` folder.
+
+-------------------------------------------------

@@ -1,31 +1,32 @@
+-------------------------------------------------
+Devon Fazekas, <fazekade@sheridancollege.ca>, 17.07.2018
+
+-------------------------------------------------
+
 # ARIA ASR
 
 ## Installation
 
-You can install the ASR on a physical Linux machine, on a Virtual Machine (VM) or on a Linux Subsystem under windows. Nonetheless, we recommend that you use a high-spec physical machine with a GPU running Linux in order to speed up the ARIA-ASR processing. Alternatively, you can also build the ASR server on any platform where kaldi is supported, which is pretty much any Unix system - including OSX.
+You can install the ASR on a physical Linux machine, on a Virtual Machine (VM) or on a Linux Subsystem under Windows. Nonetheless, we recommend that you use a high-spec physical machine with a GPU running Linux in order to speed up the ARIA-ASR processing. Alternatively, you can also build the ASR server on any platform where kaldi is supported, which is pretty much any Unix system - including OSX.
 
 To install the ARIA-ASR server simply copy the ASR folder from this repository to your target machine (virtual or physical), and run the command `./install-aria-asr.sh` inside the main folder. This will download the latest models for all languages and install the necessary libraries (you will be asked to enter your sudo password).
 
 ### Virtual Machine setup
-<!--If you do not have it installed please download and install VMware Workstation Player. The player can be downloaded for free from the official [webpage]( http://www.vmware.com/products/player/playerpro-evaluation.html).-->
-- If you do not have it installed please download and install VirtualBox. It can be downloaded for free from the official [webpage](https://www.virtualbox.org/).
-- Then, Install the Ubuntu Linux distribution in your VM, and then follow the instructions for installing the ARIA-ASR that indicated above.
-- Finally, open the network settings if the Virtual Machine. Under 'Adapter 1', click the 'Port forwarding' button. You will see that we created a rule ('Rule 1') that will forward your machine's connections to the Virtual Machine on port 8888. This rule allows you to connect to the ARIA-ASR-VM on the same machine by using 'localhost' as the ASR IP address.
 
-<!--#### Step 3
-Open VMware Workstation Player on your computer. The first time you open VM player select 'Open a Virtual Machine' from the menu and choose 'Ubuntu 64-bit.vmx' from the VM folder (select the option 'I copied it')
-Open VirtualBox on your computer. The first time you open it, go to the 'File' menu and select 'Import Appliance'. Then select the Virtual Machine image you just downloaded ('ARIA-ASR-VM.ova').-->
-<!--[Download](https://imperialcollegelondon.box.com/v/ARIA-ASR) a Virtual Machine image that contains a pre-installed version of the latest ASR system and models for each language to your hard drive (requires ~ 4.3 GB disk space and may occupy up to 6 GB RAM). Use the following password to access the folder: "ARIA_ASR_2017"-->
+- If you do not have it installed please download and install VirtualBox. It can be downloaded for free from the official [webpage](https://www.virtualbox.org/).
+- Then, install the Ubuntu Linux distribution in your VM, and then follow the instructions for installing the ARIA-ASR as indicated above.
+- Finally, open the network settings in the VM. Under 'Adapter 1', click the 'Port forwarding' button. You will see that we created a rule ('Rule 1') that will forward your machine's connections to the VM on port 8888. This rule allows you to connect to the ARIA-ASR-VM on the same machine by using 'localhost' as the ASR IP address.
 
 ### Windows Subsystem for Linux (bash) setup
+
 - If not already installed, follow [these instructions](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide) to install  the Windows Subsystem for Linux on Windows 10.
 - Then, follow the instructions for installing the ARIA-ASR as shown above.
 - If you see error messages like this - `-bash: '\r': command not found` - you may need to run the command `dos2unix install-aria-asr.sh` to modify newline characters so they are Unix / Cygwin compatible.
 
 ### Building from source
 
-1. Check that you have all the dependencies to build [kaldi](https://github.com/kaldi-asr/kaldi). 
-1. Follow the instructions in the `src` subfolder to create executables. 
+1. Check that you have all the dependencies to build [kaldi](https://github.com/kaldi-asr/kaldi).
+1. Follow the instructions in the `src` subfolder to create executables.
 
 ## Updating the models
 
@@ -33,19 +34,45 @@ In case there are new models available, simply run the command `./install-aria-a
 
 ## Running the ASR server
 
-The `run` directory inside the `Module-ASR` folder of this repository contains a universal script called `launch-asr.sh` used to run the ASR server passing all the options to control the behaviour of the execution, for example, select language, mode, end-point detection, ..etc. The script should be run as:
+The `run` directory inside the `Module-ASR` folder of this repository contains a universal script called `launch-asr.sh` used to run the ASR server passing all the options to control the behavior of the execution, for example, select language, mode, end-point detection, etc. The script should be run as:
 
 `./launch-asr.sh --lang [en|de|fr] --socket [ex: 8888] --epoint [true|false] --nbest [n >= 1] --mode [inc|utt] --beamv [ex: 10] --lbeamv [ex: 6] --maxactive [e.g. 2000]`
 
-* `lang`: desired language - English (en), German (de), or French (fr). 
-* `socket`: socket number where the audio will be received (4 digit number).
-* `epoint`: turn on (true) or off (false) the Kaldi's end-point detection.
-* `nbest`: the number of items in the N-best list. The N-Best list contains N ranked hypotheses for the user’s speech, where the top entry is the engine’s best hypothesis. When the top entry is incorrect, the correct entry is often contained
-lower down in the N-Best list.
-* `mode`: ASR decoding mode. If set to "inc" it will start the ASR server in incremental mode. In this mode, the decoded output starts immediately when the speech is received and provides transcriptions as soon as a word is detected. The output changes over time as more speech segments are received. When the utterance ends (i.e. end-point is detected), the decoded output is refined using the full utterance. If mode is set to "utt", the ASR will only output the full utterance (i.e. when end-point is detected). 
-* `beamv`: used during graph search to prune ASR hypotheses at the state level. It determines the number of hypotheses tested in the forward pass of the decoding. Default value is 10 (optimized during development).
-* `lbeamv`: used when producing word level lattices after the decoding is finished. It is used to prune the lattice even further before it is saved/output. Some decoders refer to this as the backward pass beam. Lattice beam is typically smaller than the normal beam and it's purpose is to limit the final size of the lattice (i.e., depth, or number of alternatives at each time step). Default value is 10 (optimized during development).
-* `max-active`: the maximum number of states that can be active at one time in the decoder (defaults to 2000 - we recommend to keep this value).
+* `lang`:
+
+    Set the desired language to English (en), German (de), or French (fr). Note, French is still not available.
+
+* `socket`:
+
+    Socket number where the audio will be received (4 digit number).
+
+* `epoint`:
+
+    Turn Kaldi's end-point detection ON (true) or OFF (false).
+
+* `nbest`:
+
+    Used to select the desired number of N-best list to output. The N-Best list contains N ranked hypotheses for the user’s speech, where the top entry is the engine’s best hypothesis. When the top entry is incorrect, the correct entry is often contained lower down in the N-Best list. Note that in case it is set to 1, a different, little more efficient, binary will be used.
+
+* `mode`:
+
+    Used to select the ASR decoding mode. With `inc` selected, the decoded output starts immediately following speech detection providing transcriptions as soon as a word is detected, and changes over time as more speech segments are received. When the utterance ends (i.e. end-point is detected), the decoded output is refined once more using the full utterance to the final decoded utterance, and outputs to a separate line. The server then awaits the next utterance.
+
+    Initial tests show that performing the end-point detection as a part of this binary by using `--epoint true` is better in this case.
+
+    With `utt` selected, N-best sentences are outputted only after finishing the full utterance (i.e. when end-point is detected).
+
+* `beamv`:
+
+    Used during graph search to prune ASR hypotheses at the state level. It determines the number of hypotheses tested in the forward pass of the decoding. Default value is 10 (optimized during development).
+
+* `lbeamv`:
+
+    Used when producing word level lattices after the decoding is finished. It is used to prune the lattice even further before it is saved/output. Some decoders refer to this as the backward pass beam. Lattice beam is typically smaller than the normal beam and its purpose is to limit the final size of the lattice (i.e., depth, or number of alternatives at each time step). Default value is 10 (optimized during development).
+
+* `max-active`:
+
+    The maximum number of states that can be active at one time in the decoder (defaults to 2000 - we recommend to keep this value).
 
 **If it is necessary to automatically restart the ASR server (e.g., after a crash), then the `launch.sh` script should be used instead. In this case, the parameters described above should be set inside the file rather than passed inline (it is simpler to do it like this anyway). This script will start the ASR server by calling `launch-asr.sh` with the specified parameters, and periodically monitor the status of the process. If it crashed, then it will start it again.**
 
@@ -56,16 +83,34 @@ The output returned from an ASR server to the client machine (normally a Windows
 ### Header
 
 This is a sample header:
-`RESULT:NUM=5,FORMAT=WSE,RECO-DUR=8.26,INPUT-DUR=5.31,INPUT-TIME-START=0,INPUT-TIME-END=5.31`
+`RESULT:NUM=5, FORMAT=WSE, RECO-DUR=8.26, INPUT-DUR=5.31, INPUT-TIME-START=0, INPUT-TIME-END=5.31`
 
-* `RESULT:NUM=X` - X is an integer indicates the number of words in the segment being outputted
-* `FORMAT=X` - XXX is a string indicating the the format of the result to follow: WSE (word-start-end) / WSEC (word-start-end-confidence)
-* `RECO-DUR=X` - X is an float indicating the amount of time (in seconds) that the ASR machine needed to transcribe the segment
-* `INPUT-DUR=X` - X is an float indicating the the length (in seconds) of the segment transcribed
-* `INPUT-TIME-START=X` - X is an float indicating the the start time of the segment being transcribed (this value is relative to reception of the first segment in the session)
-* `INPUT-TIME-END=X` - X is an float indicating the end time of the segment being transcribed (this value is relative to reception of the first segment in the session, i.e., INPUT-TIME-START+INPUT-DUR)
+* `RESULT:NUM=X`:
+
+    [X] is an integer indicating the number of words in the segment being outputted.
+
+* `FORMAT=X`:
+
+    [X] is a string indicating the format of the result to follow: **WSE** (word-start-end) / **WSEC** (word-start-end-confidence).
+
+* `RECO-DUR=X`:
+
+    [X] is a float indicating the amount of time (in seconds) that the ASR machine needed to transcribe the segment.
+
+* `INPUT-DUR=X`:
+
+    [X] is a float indicating the length (in seconds) of the segment transcribed.
+
+* `INPUT-TIME-START=X`:
+
+    [X] is a float indicating the start-time of the segment being transcribed (this value is relative to reception of the first segment in the session).
+
+* `INPUT-TIME-END=X`:
+
+    [X] is a float indicating the end-time of the segment being transcribed (this value is relative to reception of the first segment in the session, i.e., INPUT-TIME-START+INPUT-DUR).
 
 ### Transcription
+
 After the header, the actual transcription follows. Below we describe the output format in each transcription mode (`utt with nbest=1`, `utt with nbest>1`, and `inc`).
 
 #### mode="utt" and nbest=1
@@ -140,7 +185,7 @@ After the end-point is detected, the output to the socket will be:
     (n-1)        # mark of nth best end
     RESULT:DONE  # mark of segment end
 
-Concrete example (using the file `test_matthew.wav` under `test_audio` with nbest set to 3):
+Concrete example (using the file `test_matthew.wav` under `test_audio` with N-best set to 3):
 
     RESULT:NUM=1,FORMAT=WSE,RECO-DUR=3.62239,INPUT-DUR=2.16,INPUT-TIME-START=0,INPUT-TIME-END=2.16
 
@@ -225,11 +270,7 @@ Concrete example (using the file `test_matthew.wav` under `test_audio` with nbes
 
 #### mode="inc"
 
-    By default nbest=1 is assumed. While end-point is not yet detected, the output to the socket
-    will be "one" (partial) sentence with a marker of the end of partial output. When the end-point
-    is detected (i.e. the segment ends completely till the end), the final refined 1-best sentence
-    will be the output. The full output format takes the form: (note the number of words will be growing
-    over time while outputing partial sentences)
+    By default nbest=1 is assumed. While end-point is not yet detected, the output to the socket will be "one" (partial) sentence with a marker of the end of partial output. When the end-point is detected (i.e. the segment ends completely until the end), the final refined 1-best sentence will be the output. The full output format takes the form: (note the number of words will be growing over time while outputting partial sentences)
 
     word_1
     RESULT:PART  # mark the end of a partial output (ex: 1 word)
@@ -444,49 +485,82 @@ Concrete example (using the file `test_matthew.wav` under `test_audio`):
 ## Output format (JSON)
 Within the ARIA framework the output from the ASR server is parsed and converted into a JSON stream. The JSON elements are the following:
 
-* `content` - always set to "ASR_output" (simply to identify the stream)
-* `mode` - the mode in which the ASR server was started: 'utt' or 'inc'. Note that this value is obtained from the directly from ARIA framework and not received from the ASR server. If there is a mismatch the parsing will not work as expected (make sure that you start the ARIA framework with the correct ASR parameters as set in the server)
-* `nbest` - the number of best transcriptions being sent by the ASR server (>=1). Note that this value is obtained from the directly from ARIA framework and not received from the ASR server. If there is a mismatch the parsing will not work as expected (make sure that you start the ARIA framework with the correct ASR parameters as set in the server).
-* `RECO-DUR=X` - X is an float indicating the amount of time (in seconds) that the ASR machine needed to transcribe the segment
-* `idur` - a float value indicating the length (in seconds) of the segment transcribed (same as `INPUT-DUR`)
-* `rdur` - a float value indicating the amount of time (in seconds) that the ASR machine needed to transcribe the segment (same as `RECO-DUR`)
-* `partial` - a boolean value (True/False) indicating whether the transcription(s) are final or intermediate (partial). This value is only meaningful in `inc` mode.
-* `transcriptions` - an array with the `nbest` transcriptions of a given segment that includes 3 parameters:
-  * `id` - the id of the transcription (integer values between `0` and `nbest-1`)  
-  * `nwords` - the number of words in the transcription  
-  * `text` - a string with the transcription itself
-  * N.B. there may be less than `nbest` lines in this array, as the ASR may not have been able to detect as many possibilities.
+* `content`:
+
+    Always set to "ASR_output" (simply to identify the stream).
+
+* `mode`:
+
+    The mode in which the ASR server was started: `utt` or `inc`. **Note** that this value is obtained directly from ARIA framework and not received from the ASR server. If there is a mismatch the parsing will not work as expected (make sure that you start the ARIA framework with the correct ASR parameters as set in the server).
+
+* `nbest`:
+
+    The number of best transcriptions being sent by the ASR server (>=1). **Note** that this value is obtained directly from ARIA framework and not received from the ASR server. If there is a mismatch the parsing will not work as expected (make sure that you start the ARIA framework with the correct ASR parameters as set in the server).
+
+* `idur`:
+
+    A float value indicating the length (in seconds) of the segment transcribed (same as `INPUT-DUR`).
+
+* `rdur`:
+
+    A float value indicating the amount of time (in seconds) that the ASR machine needed to transcribe the segment (same as `RECO-DUR`).
+
+* `partial`:
+
+    A boolean value (True/False) indicating whether the transcription(s) are final or intermediate (partial). This value is only meaningful in `inc` mode.
+
+* `transcriptions`:
+
+    An array with the `nbest` transcriptions of a given segment that includes 3 parameters:
+
+    * `id`:
+
+        The id of the transcription (integer values between `0` and `nbest - 1`).  
+
+    * `nwords`:
+
+        The number of words in the transcription.
+
+    * `text`:
+
+        A string with the transcription itself.
+
+    * **NOTE**, there may be less than `nbest` lines in this array, as the ASR may not have been able to detect as many possibilities.
 
 Below, you can find an example of a JSON stream:
 
-    {  
-      "content": "ASR_output"
-      "mode": "utt",
-      "nbest": 5,
-      "idur": "2.02",
-      "rdur": "0.526953",
-      "partial": false,
-      "transcriptions":
-                      [    
-                       {
-                        "id": "0",
-                        "nwords": 4,
-                        "text": "ARE YOU ENJOYING YOURSELF"
-                       },
-                       {
-                        "id": "1",
-                        "nwords": 4,
-                        "text": "ARE YOU ENJOY YOURSELF"
-                       },
-                       {
-                        "id": "2",
-                        "nwords": 4,
-                        "text": "A YOU ENJOY YOURSELF"
-                       },
-                       {
-                        "id": "3",
-                        "nwords": 3,
-                        "text": "YOU ENJOY YOURSELF"
-                       }
-                      ]
-    }
+```
+{  
+"content": "ASR_output",
+"mode": "utt",
+"nbest": 5,
+"idur": "2.02",
+"rdur": "0.526953",
+"partial": false,
+"transcriptions":
+    [    
+        {
+            "id": "0",
+            "nwords": 4,
+            "text": "ARE YOU ENJOYING YOURSELF"
+        },
+        {
+            "id": "1",
+            "nwords": 4,
+            "text": "ARE YOU ENJOY YOURSELF"
+        },
+        {
+            "id": "2",
+            "nwords": 4,
+            "text": "A YOU ENJOY YOURSELF"
+        },
+        {
+            "id": "3",
+            "nwords": 3,
+            "text": "YOU ENJOY YOURSELF"
+        }
+    ]
+}
+```
+
+-------------------------------------------------

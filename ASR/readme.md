@@ -270,7 +270,12 @@ Concrete example (using the file `test_matthew.wav` under `test_audio` with N-be
 
 #### mode="inc"
 
-    By default nbest=1 is assumed. While end-point is not yet detected, the output to the socket will be "one" (partial) sentence with a marker of the end of partial output. When the end-point is detected (i.e. the segment ends completely until the end), the final refined 1-best sentence will be the output. The full output format takes the form: (note the number of words will be growing over time while outputting partial sentences)
+    By default nbest=1 is assumed. While end-point is not yet detected, the
+    output to the socket will be "one" (partial) sentence with a marker of the 
+    end of partial output. When the end-point is detected (i.e. the segment 
+    ends completely until the end), the final refined 1-best sentence will be 
+    the output. The full output format takes the form: (note the number of 
+    words will be growing over time while outputting partial sentences)
 
     word_1
     RESULT:PART  # mark the end of a partial output (ex: 1 word)

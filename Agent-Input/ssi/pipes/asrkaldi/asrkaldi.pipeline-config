@@ -3,13 +3,13 @@ file 		= media/audio.wav 			   				# if not live input read in from this file
 
 # LOGGING
 
-log:use  	=false
+log:use  	=true
 log:dir 	= log
 log:name	= asr
 log:role	= user
 
 #ASR server options
-asr:nbest =5
+asr:nbest =7
 asr:mode  =utt
 asr:language =en
 
@@ -20,7 +20,7 @@ vad:threshold =0.05
 # ASR HOST
 # asr:host	=  127.0.0.1 # localhost
 # asr:host	= 34.253.87.8 # amazon server
-asr:host	=137.250.171.134
+asr:host	=localhost
 
 # ASR PORT
 # Below you can find the option for the ASR server running from Amazon

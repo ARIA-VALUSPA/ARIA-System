@@ -1,6 +1,6 @@
 #ASR server options
-asr:nbest =5
-asr:mode  =inc
+asr:nbest =10
+asr:mode  =utt
 asr:language =en
 
 # ASR HOST

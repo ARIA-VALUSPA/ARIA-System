@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <options>
-    <item name="path" type="CHAR" num="1024" value="log\2018-07-18_14-57-52_$(num,3)\agent.video.avi" lock="true" help="file path (empty for stdout)" />
+    <item name="path" type="CHAR" num="1024" value="log\2018-07-25_11-32-09_$(num,3)\agent.video.avi" lock="true" help="file path (empty for stdout)" />
     <item name="overwrite" type="BOOL" num="1" value="false" lock="true" help="overwrite file if it already exists (otherwise a unique path will be created)" />
     <item name="keepEmpty" type="BOOL" num="1" value="true" lock="true" help="store stream even if it is empty" />
     <item name="compression" type="CHAR" num="1024" value="WMVideo9 Encoder DMO" lock="true" help="name of compression filter ('None' for none, if empty dialog is shown)" />

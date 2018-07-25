@@ -7,6 +7,7 @@
 			<op1_name>face</op1_name><op1_attribute>SPC.value</op1_attribute><!--op2_value>intensity</op2_value-->
 		</modulation>
 	</qualifier>
+
 	<qualifier name="regulator-touchSelf">
 		<modulation>
 			<destination>gesture</destination><parameter>FLD.value</parameter><operator>VAL</operator>
@@ -17,6 +18,7 @@
 			<op1_value>0</op1_value>
 		</modulation>
 	</qualifier>
+
 	<qualifier name="emotion-joy">
 		<modulation>
 			<destination>gesture</destination><parameter>preference.value</parameter><operator>ADD</operator>
@@ -72,7 +74,7 @@
 			<op1_name>gesture</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>gesture</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 		<modulation>
 			<destination>face</destination><parameter>preference.value</parameter><operator>ADD</operator>
 			<op1_name>face</op1_name><op1_attribute>preference.value</op1_attribute><op2_value>0.4</op2_value>
@@ -127,7 +129,7 @@
 			<op1_name>face</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>face</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 		<modulation>
 			<destination>torso</destination><parameter>preference.value</parameter><operator>ADD</operator>
 			<op1_name>torso</op1_name><op1_attribute>preference.value</op1_attribute><op2_value>0.3</op2_value>
@@ -182,7 +184,7 @@
 			<op1_name>torso</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>torso</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 		<modulation>
 			<destination>head</destination><parameter>TMP.value</parameter><operator>ADD</operator>
 			<op1_name>head</op1_name><op1_attribute>TMP.value</op1_attribute><op2_value>0.5</op2_value>
@@ -229,7 +231,7 @@
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
 	</qualifier>
-	
+
 	<qualifier name="emotion-sadness">
 		<modulation>
 			<destination>gesture</destination><parameter>preference.value</parameter><operator>ADD</operator>
@@ -285,7 +287,7 @@
 			<op1_name>gesture</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>gesture</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 		<modulation>
 			<destination>face</destination><parameter>preference.value</parameter><operator>ADD</operator>
 			<op1_name>face</op1_name><op1_attribute>preference.value</op1_attribute><op2_value>0.4</op2_value>
@@ -340,7 +342,7 @@
 			<op1_name>face</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>face</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 		<modulation>
 			<destination>torso</destination><parameter>preference.value</parameter><operator>ADD</operator>
 			<op1_name>torso</op1_name><op1_attribute>preference.value</op1_attribute><op2_value>0.3</op2_value>
@@ -395,7 +397,7 @@
 			<op1_name>torso</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>torso</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 		<modulation>
 			<destination>head</destination><parameter>TMP.value</parameter><operator>SUB</operator>
 			<op1_name>head</op1_name><op1_attribute>TMP.value</op1_attribute><op2_value>1.5</op2_value>
@@ -442,9 +444,9 @@
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
 	</qualifier>
-	
+
 	<qualifier name="emotion-anger">
-		
+
 		<modulation>
 			<destination>gesture</destination><parameter>preference.value</parameter><operator>ADD</operator>
 			<op1_name>gesture</op1_name><op1_attribute>preference.value</op1_attribute><op2_value>0.2</op2_value>
@@ -499,7 +501,7 @@
 			<op1_name>gesture</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>gesture</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 		<modulation>
 			<destination>face</destination><parameter>preference.value</parameter><operator>ADD</operator>
 			<op1_name>face</op1_name><op1_attribute>preference.value</op1_attribute><op2_value>0.4</op2_value>
@@ -554,7 +556,7 @@
 			<op1_name>face</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>face</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 		<modulation>
 			<destination>torso</destination><parameter>preference.value</parameter><operator>ADD</operator>
 			<op1_name>torso</op1_name><op1_attribute>preference.value</op1_attribute><op2_value>0.3</op2_value>
@@ -609,7 +611,7 @@
 			<op1_name>torso</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>torso</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 		<modulation>
 			<destination>head</destination><parameter>TMP.value</parameter><operator>ADD</operator>
 			<op1_name>head</op1_name><op1_attribute>TMP.value</op1_attribute><op2_value>0.5</op2_value>
@@ -655,16 +657,16 @@
 			<op1_name>head</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>head</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 	</qualifier>
-	
+
 	<qualifier name="certainty-certain">
 		<modulation>
 			<destination>gesture</destination><parameter>PWR.value</parameter><operator>ADD</operator>
 			<op1_name>gesture</op1_name><op1_attribute>PWR.value</op1_attribute><op2_value>0.5</op2_value>
 		</modulation>
 	</qualifier>
-	
+
 	<qualifier name="world-*">
 		<modulation>
 			<destination>gesture</destination><parameter>preference.value</parameter><operator>ADD</operator>
@@ -685,7 +687,7 @@
 			<op2_attribute>preference.max</op2_attribute>
 		</modulation>
 	</qualifier>
-	
+
 	<qualifier name="turntaking-*">
 		<modulation>
 			<destination>head</destination><parameter>preference.value</parameter><operator>ADD</operator>
@@ -723,7 +725,7 @@
 			<op1_name>face</op1_name><op1_attribute>preference.min</op1_attribute><op2_name>face</op2_name>
 			<op2_attribute>preference.max</op2_attribute>
 		</modulation>
-		
+
 	</qualifier>
 
 	<qualifier name="performative-*">
@@ -767,8 +769,8 @@
 			<op1_name>gesture</op1_name><op1_attribute>preference.min</op1_attribute><op2_name>gesture</op2_name>
 			<op2_attribute>preference.max</op2_attribute>
 		</modulation>
-	</qualifier>	
-	
+	</qualifier>
+
 	<qualifier name="boundary-*">
 		<modulation>
 			<destination>head</destination><parameter>preference.value</parameter><operator>ADD</operator>
@@ -780,7 +782,7 @@
 			<op2_attribute>preference.max</op2_attribute>
 		</modulation>
 	</qualifier>
-	
+
 	<qualifier name="belief-relation-enumerate">
 		<modulation>
 			<destination>head</destination><parameter>REP.value</parameter><operator>VAL</operator>
@@ -803,7 +805,7 @@
 			<op1_value>1.0</op1_value>
 		</modulation>
 	</qualifier>
-	
+
 	<qualifier name="emphasis-medium">
 		<modulation>
 			<destination>gesture</destination><parameter>preference.value</parameter><operator>ADD</operator>
@@ -859,7 +861,7 @@
 			<op1_name>gesture</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>gesture</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 		<modulation>
 			<destination>face</destination><parameter>preference.value</parameter><operator>ADD</operator>
 			<op1_name>face</op1_name><op1_attribute>preference.value</op1_attribute><op2_value>0.2</op2_value>
@@ -914,7 +916,7 @@
 			<op1_name>face</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>face</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 		<modulation>
 			<destination>torso</destination><parameter>preference.value</parameter><operator>ADD</operator>
 			<op1_name>torso</op1_name><op1_attribute>preference.value</op1_attribute><op2_value>0.2</op2_value>
@@ -969,7 +971,7 @@
 			<op1_name>torso</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>torso</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 		<modulation>
 			<destination>head</destination><parameter>preference.value</parameter><operator>ADD</operator>
 			<op1_name>head</op1_name><op1_attribute>preference.value</op1_attribute><op2_value>0.2</op2_value>
@@ -1025,7 +1027,7 @@
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
 	</qualifier>
-	
+
 	<qualifier name="emphasis-low">
 		<modulation>
 			<destination>gesture</destination><parameter>preference.value</parameter><operator>ADD</operator>
@@ -1081,7 +1083,7 @@
 			<op1_name>gesture</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>gesture</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 		<modulation>
 			<destination>face</destination><parameter>preference.value</parameter><operator>ADD</operator>
 			<op1_name>face</op1_name><op1_attribute>preference.value</op1_attribute><op2_value>0.2</op2_value>
@@ -1136,7 +1138,7 @@
 			<op1_name>face</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>face</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 		<modulation>
 			<destination>torso</destination><parameter>preference.value</parameter><operator>ADD</operator>
 			<op1_name>torso</op1_name><op1_attribute>preference.value</op1_attribute><op2_value>0.2</op2_value>
@@ -1191,7 +1193,7 @@
 			<op1_name>torso</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>torso</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 		<modulation>
 			<destination>head</destination><parameter>preference.value</parameter><operator>ADD</operator>
 			<op1_name>head</op1_name><op1_attribute>preference.value</op1_attribute><op2_value>0.2</op2_value>
@@ -1247,7 +1249,7 @@
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
 	</qualifier>
-	
+
 	<qualifier name="emphasis-high">
 		<modulation>
 			<destination>gesture</destination><parameter>preference.value</parameter><operator>ADD</operator>
@@ -1303,7 +1305,7 @@
 			<op1_name>gesture</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>gesture</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 		<modulation>
 			<destination>face</destination><parameter>preference.value</parameter><operator>ADD</operator>
 			<op1_name>face</op1_name><op1_attribute>preference.value</op1_attribute><op2_value>0.4</op2_value>
@@ -1358,7 +1360,7 @@
 			<op1_name>face</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>face</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 		<modulation>
 			<destination>torso</destination><parameter>preference.value</parameter><operator>ADD</operator>
 			<op1_name>torso</op1_name><op1_attribute>preference.value</op1_attribute><op2_value>0.4</op2_value>
@@ -1413,7 +1415,7 @@
 			<op1_name>torso</op1_name><op1_attribute>OAC.min</op1_attribute><op2_name>torso</op2_name>
 			<op2_attribute>OAC.max</op2_attribute>
 		</modulation>
-		
+
 		<modulation>
 			<destination>head</destination><parameter>preference.value</parameter><operator>ADD</operator>
 			<op1_name>head</op1_name><op1_attribute>preference.value</op1_attribute><op2_value>0.4</op2_value>

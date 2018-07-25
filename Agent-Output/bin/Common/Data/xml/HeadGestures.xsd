@@ -39,7 +39,6 @@
         <xsd:attribute name="type" type="xsd:string" use="optional"/>
     </xsd:complexType>
 
-
     <xsd:complexType name="HeadParamType">
         <xsd:attribute name="direction" type="xsd:string" use="required"/>
         <xsd:attribute name="min" type="xsd:float" use="optional"/>

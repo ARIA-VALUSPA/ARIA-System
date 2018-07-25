@@ -6,7 +6,7 @@
 	LateralRoll is leftward/rightward rotation in the lateral plan (around z axis)
 -->
 
-<!-- 
+<!--
 	In the SagittalTilt, the rotation in the backward direction correspond to a backward rotation
 						 the rotation in the forward direction correspond to a forward rotation
 
@@ -35,7 +35,6 @@
 			<LateralRoll direction="Leftward" min="0.0" max="0.0"/>
 		</KeyPoint>
 	</head>
-
 	<head id="Up" lexeme="Up">
 		<KeyPoint>
 			<SagittalTilt direction="Backward" min="0.15" max="0.15"/>
@@ -195,7 +194,7 @@
 		<KeyPoint>
 			<LateralRoll direction="Rightward" min="0.04" max="0.15"/>
 			<SagittalTilt direction="Backward" min="0.04" max="0.15"/>
-			<VerticalTorsion direction="Rightward" min="0.04" max="0.15"/> 
+			<VerticalTorsion direction="Rightward" min="0.04" max="0.15"/>
 		</KeyPoint>
 	</head>
 	<head id="pride_signal_8" lexeme="PRIDE_SIGNAL">
@@ -302,7 +301,6 @@
 			<SagittalTilt direction="Forward" min="0.1" max="0.4"/>
 		</KeyPoint>
 	</head>
-
 	<head id="NodDownUp" lexeme="NOD">
 		<KeyPoint type="strokeStart">
 			<SagittalTilt direction="Forward" min="0.1" max="0.4"/>
@@ -360,7 +358,6 @@
 			<VerticalTorsion direction="Rightward" min="0.0" max="0.5"/>
 		</KeyPoint>
 	</head>
-
 	<head id="ShakeRightDownLeft" lexeme="ShakeRightDownLeft" repetition="2">
 		<KeyPoint type="strokeStart">
 			<VerticalTorsion direction="Rightward" min="0.0" max="0.5"/>
@@ -388,32 +385,26 @@
 	 	<LateralRoll direction="" min="0.0" max="1.0"></LateralRoll>
 		-->
 	</headDirectionShift>
-
 	<headDirectionShift id="RightTurn">
 		<!-- AU51 : Right turn (rotation) around the vertical axis -->
 		<VerticalTorsion direction="Rightward" min="0.0" max="0.8"></VerticalTorsion>
 	</headDirectionShift>
-
 	<headDirectionShift id="LeftTurn">
 		<!-- AU52 : small Left turn (rotation) around the vertical axis -->
 		<VerticalTorsion direction="Leftward" min="0.0" max="0.2"></VerticalTorsion>
 	</headDirectionShift>
-
 	<headDirectionShift id="RightTilt">
 		<!-- AU55 : lateral Right tilt -->
 		<LateralRoll direction="Rightward" min="0.0" max="0.5"></LateralRoll>
 	</headDirectionShift>
-
 	<headDirectionShift id="LeftTilt">
 		<!-- AU56 : lateral Left tilt -->
 		<LateralRoll direction="Leftward" min="0.0" max="0.5"></LateralRoll>
 	</headDirectionShift>
-
 	<headDirectionShift id="Forward">
 		<!-- AU53 : Downward head tilt -->
 		<SagittalTilt direction="Forward" min="0.0" max="0.5"></SagittalTilt>
 	</headDirectionShift>
-
 	<headDirectionShift id="Backward">
 		<!-- AU54 : Upward head tilt-->
 		<SagittalTilt direction="Backward" min="0.0" max="0.5"></SagittalTilt>

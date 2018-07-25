@@ -338,7 +338,7 @@
 		<body mesh="obadiah/body.mesh" />
 	</agent>
 
-	<!-- poppy familly -->
+	<!-- poppy family -->
 	<agent name="poppence" type="composite" scale="1">
 		<head>
 			<position x="-0.00095" y="-1.50822" z="-0.03059"/>
@@ -375,7 +375,7 @@
 		</body>
 	</agent>
 
-	<!-- spike familly -->
+	<!-- spike family -->
 	<agent name="brice" type="composite" scale="0.02">
 		<head>
 			<position x="-0.0508" y="-79.75616" z="-0.254"/>
@@ -408,7 +408,7 @@
 		</body>
 	</agent>
 
-	<!-- autodesk familly -->
+	<!-- autodesk family -->
 	<agent name="camille" type="autodesk" scale="1">
 		<all mesh="camille/body.mesh" />
 		<wrinklesmaterial name="camille_wrinkles" target="0" />

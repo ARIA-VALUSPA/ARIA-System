@@ -4,7 +4,7 @@ Devon Fazekas, <fazekade@sheridancollege.ca>, 05.07.2018
 
 # Prerequisites
 
-To download **Visual Studio** run [`vc_redist.x64.exe`](vc_redist.x64.exe).
+To download **Microsoft Visual C++ 2005 Redistributable Package(x86)** run [`vc_redist.x64.exe`](vc_redist.x64.exe).
 
 -------------------------------------------------
 

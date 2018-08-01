@@ -1,0 +1,21 @@
+-------------------------------------------------
+Johannes Wagner, <wagner@hcm-lab.de>, 24.08.2016
+-------------------------------------------------
+
+From the pipeline/ folder the following projects are available:
+
+* agender :: Age and gender recognition
+  
+* all-in-one :: Full system
+
+* asrfake :: Faked speech recognition
+
+* asrkaldi :: Automated speech recognition
+
+* emax :: Facial emotion recognition
+
+* emospeech :: Vocal emotion recognition
+
+For information how to run the pipeline please see README in individual folders
+
+-------------------------------------------------

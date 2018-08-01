@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <HeadGestures xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Common/Data/xml/HeadGestures.xsd">
 <!--
-	SagittalTilt is an backward/forward rotation in the sagittal plan (around x axis)
+	SagittalTilt is an backward/forward rotation in the sagittal plane (around x axis)
 	VerticalTorsion is a leftward/rightward rotation around the vertical axis (around y axis)
-	LateralRoll is leftward/rightward rotation in the lateral plan (around z axis)
+	LateralRoll is leftward/rightward rotation in the lateral plane (around z axis)
 -->
 
 <!--

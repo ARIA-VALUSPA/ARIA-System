@@ -2,16 +2,13 @@
 <!DOCTYPE multimodals SYSTEM "./../../Common/Data/xml/multimodal.dtd">
 <multimodals>
   <multimodal emotion="test">
-  
       <con type="equal" label="test_label_1">
         <arg id="1" type="start"/>
         <arg id="2" type="start"/>
       </con>
-    
-
   </multimodal>
+
   <multimodal emotion="regret">
-   
       <!-- head conflicts -->
       <con type="or" label="regret_label_1">
         <arg>
@@ -35,7 +32,8 @@
         </arg>
       </con>
       <!-- 2000102S6V video -->
-      <!-- trucco  al inizio ci vuole 21, 22 or 16 or -->
+      <!-- Italian: trucco  al inizio ci vuole 21, 22 or 16 or -->
+      <!-- English: Trick at the beginning it takes 21, 22, or 16 hours -->
       <con type="or" label="regret_label_2">
         <arg>
           <con type="or" label="regret_label_2_sub_1">
@@ -101,8 +99,9 @@
         <arg id="19"/>
         <arg id="6"/>
       </con>
-      <!-- .... trucco 19 nie moze istniec bez 16, ale 16 moze istniec bez 19 -->
-      <!-- ...(.not16 and not 19) or (.16 and 19) or (.16 and not 19) -->
+      <!-- Italian: trucco 19 nie moze istniec bez 16, ale 16 moze istniec bez 19 -->
+      <!-- English: Trucco 19 cannot exist without 16, but 16 can without 19 -->
+      <!-- (not 16 and not 19) or (16 and 19) or (16 and not 19) -->
       <con type="or"  label="reget_label_12">
         <arg>
           <con type="and"  label="reget_label_12_sb_1">
@@ -164,8 +163,9 @@
         </arg>
       </con>
       <!-- .... ????? -->
-      <!-- .... trucco 17 nie moze istniec bez 16, ale 16 moze istniec bez 17 -->
-      <!-- ...(.not16 and not 17) or (.16 and 17) or (.16 and not 17) -->
+      <!-- Italian: trucco 17 nie moze istniec bez 16, ale 16 moze istniec bez 17 -->
+      <!-- English: Trucco 17 cannot exist without 16, but 16 can without 17 -->
+      <!-- (not 16 and not 17) or (16 and 17) or (16 and not 17) -->
       <con type="or" label="reget_label_13">
         <arg>
           <con type="and" label="reget_label_13_sb_1">
@@ -227,8 +227,9 @@
         </arg>
       </con>
       <!-- .... ????? -->
-      <!-- .... trucco 18 nie moze istniec bez 16, ale 16 moze istniec bez 18 -->
-      <!-- ...(.not16 and not 18) or (.16 and 18) or (.16 and not 18) -->
+      <!-- Italian: trucco 18 nie moze istniec bez 16, ale 16 moze istniec bez 18 -->
+      <!-- English: Trucco 18 cannot exist without 16, but 16 can without 18 -->
+      <!-- (not 16 and not 18) or (16 and 18) or (16 and not 18) -->
       <con type="or" label="reget_label_14">
         <arg>
           <con type="and" label="reget_label_14_sb_1">
@@ -517,14 +518,9 @@
         <arg id="17"/>
         <arg id="23"/>
       </con>
-    
-
   </multimodal>
-  <!-- ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-  <multimodal emotion="rejoice">
-   
-    
 
+  <multimodal emotion="rejoice">
       <con type="preceded" label="rejoice_label_1">
         <arg id="20" type="start"/>
         <arg id="21" type="start"/>
@@ -550,8 +546,9 @@
           </con>
         </arg>
       </con>
-      <!-- .... trucco 1 nie moze istniec bez 14, ale 16 moze istniec bez 17 -->
-      <!-- ...(.not16 and not 17) or (.16 and 17) or (.16 and not 17) -->
+      <!-- Italian: trucco 1 nie moze istniec bez 14, ale 16 moze istniec bez 17 -->
+      <!-- English: Trucco 1 cannot exist without 14, but 16 can without 17 -->
+      <!-- (not 16 and not 17) or (16 and 17) or (16 and not 17) -->
       <con type="or" label="rejoice_label_3">
         <arg>
           <con type="or" label="rejoice_label_3_sub_1">
@@ -694,8 +691,9 @@
           </con>
         </arg>
       </con>
-      <!-- .... trucco 20 nie moze istniec bez 18 ale 18 moze istniec bez 20 -->
-      <!-- ...(.not16 and not ) or (.16 and 19) or (.16 and not 19) -->
+      <!-- Italian: trucco 20 nie moze istniec bez 18 ale 18 moze istniec bez 20 -->
+      <!-- English: Trucco 20 cannot exist without 18, but 18 can without 20 -->
+      <!-- (not 16 and not) or (16 and 19) or (16 and not 19) -->
       <con type="or"  label="rejoice_label_5">
         <arg>
           <con type="and" label="rejoice_label_5_sub_1">
@@ -757,8 +755,9 @@
         </arg>
       </con>
       <!-- .... ????? -->
-      <!-- .... trucco 20 nie moze istniec bez 18 ale 18 moze istniec bez 20 -->
-      <!-- ...(.not16 and not ) or (.16 and 19) or (.16 and not 19) -->
+      <!-- Italian: trucco 20 nie moze istniec bez 18 ale 18 moze istniec bez 20 -->
+      <!-- English: Trucco 20 cannot exist without 18, but 18 can without 20 -->
+      <!-- (not 16 and not) or (16 and 19) or (16 and not 19) -->
       <con type="or" label="rejoice_label_6">
         <arg>
           <con type="and" label="rejoice_label_6_sub_1">
@@ -1324,14 +1323,11 @@
         <arg id="21"/>
         <arg id="14"/>
       </con>
-    
+
 
   </multimodal>
-  <!-- ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-  <multimodal emotion="embarrassment">
-   
-    
 
+  <multimodal emotion="embarrassment">
       <con type="exists" label="embarrassment_label_1">
         <arg id="1"/>
       </con>
@@ -1438,14 +1434,9 @@
         <arg id="10"/>
         <arg id="12"/>
       </con>
-    
-
   </multimodal>
-  <!-- ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-  <multimodal emotion="tension">
-   
-    
 
+  <multimodal emotion="tension">
       <!-- ,others,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
       <!-- sequence 1 2 3 -->
       <con type="and" label="tension_label_1">
@@ -1488,14 +1479,9 @@
           </con>
         </arg>
       </con>
-    
-
   </multimodal>
-  <!-- ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-  <multimodal emotion="joy">
-   
-    
 
+  <multimodal emotion="joy">
       <!-- ,others,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
       <!-- 2 occurs after 1 or after 3-->
       <con type="or" label="joy_label_1">
@@ -1721,14 +1707,9 @@
         <arg id="11"/>
         <arg id="13"/>
       </con>
-    
-
   </multimodal>
-  <!-- ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-  <multimodal emotion="anger">
-   
-    
 
+  <multimodal emotion="anger">
       <!-- ,,EXCLUDES,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
       <con type="excludes" label="anger_label_1">
         <arg id="5"/>
@@ -1821,14 +1802,9 @@
         <arg id="5"/>
         <arg id="8"/>
       </con>
-    
-
   </multimodal>
-  <!-- ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-  <multimodal emotion="anxiety">
-  
-    
 
+  <multimodal emotion="anxiety">
       <!-- ,,EXCLUDES,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
       <con type="excludes" label="anxiety_label_1">
         <arg id="9"/>
@@ -1854,14 +1830,9 @@
         <arg id="4"/>
         <arg id="6"/>
       </con>
-    
-
   </multimodal>
-  <!-- ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-  <multimodal emotion="relief">
-   
-    
 
+  <multimodal emotion="relief">
       <!-- ,,EXCLUDES,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
       <con type="excludes" label="relief_label_1">
         <arg id="13"/>
@@ -2087,14 +2058,9 @@
           </con>
         </arg>
       </con>
-    
-
   </multimodal>
-  <!-- ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-  <multimodal emotion="pride">
-    
-    
 
+  <multimodal emotion="pride">
       <!-- ,,EXCLUDES,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
       <con type="or" label="pride_label_1">
         <arg>
@@ -2198,14 +2164,9 @@
           </con>
         </arg>
       </con>
-    
-
   </multimodal>
-  <!-- ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
-  <multimodal emotion="panic_fear">
-   
-    
 
+  <multimodal emotion="panic_fear">
       <!-- ,,EXCLUDES,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
       <!-- ,,face,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
       <con type="excludes" label="panic_fear_label_1">
@@ -2507,7 +2468,5 @@
         <arg id="3" type="start"/>
         <arg id="2" type="start"/>
       </con>
-    
-
   </multimodal>
 </multimodals>

@@ -5,6 +5,8 @@ Devon Fazekas, <fazekade@sheridancollege.ca>, 11.07.2018
 
 -------------------------------------------------
 
+## About
+
 Emotional speech recognition is accomplished by either a microphone or input from a file.
 
 -------------------------------------------------

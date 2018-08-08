@@ -14,7 +14,7 @@
 		file="..\..\Agent-Input\ssi\pipes\asrkaldi\asrkaldi.pipeline-config"
 		key="log:use"
 		separator="="
-		info="Turn recording on/off">
+		info="Audio recording (on/off)">
 			<option default="True">true</option>
 			<option>false</option>
 		</config>
@@ -23,13 +23,13 @@
 		file="..\..\Agent-Input\ssi\pipes\asrkaldi\asrkaldi.pipeline-config"
 		key="asr:host"
 		separator="="
-		info="IP of the ASR machine" />
+		info="ASR: IP of the machine" />
 
 		<config
 		file="..\..\Agent-Input\ssi\pipes\asrkaldi\asrkaldi.pipeline-config"
 		key="asr:port"
 		separator="="
-		info="Port used by the ASR" />
+		info="ASR: Connection port" />
 
 		<config
 		file="..\..\Agent-Input\ssi\pipes\asrkaldi\asrkaldi.pipeline-config"

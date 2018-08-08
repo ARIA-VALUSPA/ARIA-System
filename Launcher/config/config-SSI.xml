@@ -14,7 +14,7 @@
 		file="..\..\Agent-Input\ssi\pipes\all-in-one\all-in-one.pipeline-config"
 		key="log:use"
 		separator="="
-		info="Turn recording on/off">
+		info="Audio recording (on/off)">
 			<option default="True">true</option>
 			<option>false</option>
 		</config>
@@ -38,7 +38,7 @@
 		file="..\..\Agent-Input\ssi\pipes\all-in-one\asrkaldi.pipeline-config"
 		key="asr:language"
 		separator="="
-		info="ASR: Language (en=English, de=German, fr=French)">
+		info="ASR: Language model (en=English, de=German, fr=French)">
 			<option default="True">en</option>
 			<option>de</option>
 			<option>fr</option>
@@ -48,25 +48,25 @@
 		file="..\..\Agent-Input\ssi\pipes\all-in-one\asrkaldi.pipeline-config"
 		key="asr:host"
 		separator="="
-		info="IP of the ASR machine" />
+		info="ASR: IP of the machine" />
 
 		<config
 		file="..\..\Agent-Input\ssi\pipes\all-in-one\asrkaldi.pipeline-config"
 		key="asr:port"
 		separator="="
-		info="Port used by the ASR" />
+		info="ASR: Connection port" />
 
 		<config
 		file="..\..\Agent-Input\ssi\pipes\all-in-one\asrkaldi.pipeline-config"
 		key="vad:threshold"
 		separator="="
-		info="Threshold for voice activity detection" />
+		info="ASR: Threshold for voice activity detection" />
 
 		<config
 		file="..\..\Agent-Input\ssi\models\face\caffe.cfg"
 		key="mode"
 		separator=" "
-		info="Switch between CPU and GPU classification">
+		info="Emax: CPU/GPU classification">
 			<option default="True">GPU</option>
 			<option>CPU</option>
 		</config>

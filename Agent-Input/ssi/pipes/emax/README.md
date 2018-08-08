@@ -1,15 +1,24 @@
 -------------------------------------------------
 Johannes Wagner, <wagner@hcm-lab.de>, 30.10.2015
+
+Devon Fazekas, <fazekade@sheridancollege.ca>, 07.08.2018
+
 -------------------------------------------------
+
+## About
 
 Facial emotion detection using eMax.
 
-To configure the pipeline open 'emax.pipeline-config' in a text editor.
+-------------------------------------------------
 
-To change the output format of the pipeline open 'emax-[1,2].xml'in a text editor (depending if you run single or multi face detection)
+## Configuration
 
-To run the pipeline run EMAX.bat.
+To **configure the pipeline** edit `emax.pipeline-config` found in both [`all-in-one/`](../all-in-one/emax.pipeline-config) and [`emax/`](../emax/emax.pipeline-config).
 
-To test ActiveMQ connection run EMAX_RECV.bat
+To **change the output format** of the pipeline edit [`emax.xml`](../emax/emax.xml).
+
+To **run the pipeline** execute [`EMOSPEECH.bat`](../emax/EMAX.bat).
+
+To **test ActiveMQ connection** run [`EMOSPEECH_RECV.bat`](../emax/EMAX_RECV.bat).
 
 -------------------------------------------------

@@ -1,5 +1,9 @@
 <xml>
-	<process language="javacp" class="" cwd="..\..\Agent-Core-New" name="Agent Core">
+	<process
+	language="javacp"
+	class=""
+	cwd="..\..\Agent-Core-New"
+	name="Agent Core">
 		<parameter>lib/*;modules/*;modules/lib/*</parameter>
 		<parameter>hmi.winger.Main</parameter>
 	</process>

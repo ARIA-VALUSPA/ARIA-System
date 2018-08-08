@@ -8,7 +8,7 @@
 		file="..\..\Agent-Output\bin\Agent-Output.ini"
 		key="Environment"
 		separator=" = "
-		info="Select Greta environment">
+		info="Greta: Environment">
 			<option>./empty.xml</option>
 			<option>./environment-ARIADemo1.xml</option>
 			<option default="True">./environment-ARIADemo2.xml</option>
@@ -18,7 +18,7 @@
 		file="..\..\Agent-Output\bin\Agent-Output.ini"
 		key="WhiteBoard.visible"
 		separator=" = "
-		info="Show ActiveMQ windows for Greta">
+		info="Greta: ActiveMQ window visibility">
 			<option>true</option>
 			<option default="True">false</option>
 		</config>
@@ -27,10 +27,10 @@
 		file="..\..\Agent-Output\bin\Agent-Output.ini"
 		key="System.animEngine"
 		separator=" = "
-		info="Switch animation engine">
+		info="Animation engine">
 			<option default="True">GRETA</option>
 			<option>LIVING-ACTOR</option>
 		</config>
-		
+
 	</process>
 </xml>

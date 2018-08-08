@@ -37,8 +37,11 @@
 	class="..\..\Agent-Output\bin\Agent-Output.jar"
 	cwd="..\..\Agent-Output\bin"
 	name="Agent-Output / Greta">
+		<!-- Greta: Environment -->
 		<parameter>./environment-ARIADemo2.xml</parameter>
+		<!-- Greta: ActiveMQ window visibility -->
 		<parameter>false</parameter>
+		<!-- Animation engine -->
 		<parameter>GRETA</parameter>
 	</process>
 
@@ -58,7 +61,7 @@
 		file="..\..\Agent-Input\ssi\pipes\all-in-one-final\all-in-one-final.pipeline-config"
 		key="log:use"
 		separator="="
-		info="Record AUDIO">
+		info="Audio recording (on/off)">
 			<option default="True">true</option>
 			<option>false</option>
 		</config>
@@ -67,7 +70,7 @@
 		file="..\..\Agent-Input\ssi\pipes\all-in-one-final\all-in-one-final.pipeline-config"
 		key="log:screen"
 		separator="="
-		info="Record VIDEO">
+		info="Video recording (on/off)">
 			<option default="True">true</option>
 			<option>false</option>
 		</config>
@@ -76,7 +79,7 @@
 		file="..\..\Agent-Input\ssi\pipes\all-in-one-final\all-in-one-final.pipeline-config"
 		key="log:screen:region"
 		separator="="
-		info="VIDEO region to record (top,left,width,height)" />
+		info="Video recording region (top,left,width,height)" />
 
 		<config
 		file="..\..\Agent-Input\ssi\pipes\all-in-one-final\all-in-one-final.pipeline-config"
@@ -124,7 +127,7 @@
 		file="..\..\Agent-Input\ssi\models\face\caffe.cfg"
 		key="mode"
 		separator=" "
-		info="Emax: Switch between CPU and GPU classification">
+		info="Emax: CPU / GPU classification">
 			<option default="True">GPU</option>
 			<option>CPU</option>
 		</config>

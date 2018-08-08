@@ -3,7 +3,7 @@ show:plot = true
 show:gui = true
 
 # logging
-log:use  	= false
+log:use  	= true
 log:dir 	= log
 
 #ASR server options
@@ -13,14 +13,14 @@ asr:language = en
 
 # VAD options
 # activity threshold
-vad:threshold =0.1
+vad:threshold =0.001
 
 output:asjson = false
 
 # ASR HOST
 # asr:host	=  127.0.0.1 # localhost
 # asr:host	= 34.253.87.8 # amazon server
-asr:host	=localhost
+asr:host	= localhost
 
 # ASR PORT
 # Below you can find the option for the ASR server running from Amazon
@@ -29,4 +29,4 @@ asr:host	=localhost
 # asr:port = 9999 # DE, 1-best ("utt")
 # asr:port = 9998 # DE, 5-best ("utt")
 # asr:port = 9997 # DE, 1-best ("inc")
-asr:port =8888
+asr:port = 8888

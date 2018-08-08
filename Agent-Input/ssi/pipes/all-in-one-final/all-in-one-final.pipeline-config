@@ -21,7 +21,7 @@ log:screen:rate=5
 # sender
 
 sender:template =all-in-one-final
-sender:xmltojson = false							# send as json instead of xml						
+sender:xmltojson = false							# send as json instead of xml
 
 # activemq
 
@@ -35,7 +35,7 @@ activemq:topic:dialog = dialog						# topic if dialog events
 
 # voice activity threshold
 
-vad:threshold =0.01
+vad:threshold =0.1
 
 # average windows in seconds
 
@@ -47,11 +47,11 @@ avg:long=30.0
 config = config/IS13_ComParE.conf					# name of openSMILE config file
 													# path to models
 model:root = 	../../models/speech/
-model:arousal = arousal[IS13-scale-linear-c1e-3]	
+model:arousal = arousal[IS13-scale-linear-c1e-3]
 model:valence = valence[IS13-scale-linear-c1e-3]
 model:interest = ../../models/bayes/interest.xdsl
-model:gender = chunks.audio.compare.gender.gold.linsvm 
-model:age = chunks.audio.compare.age.gold.linsvm	 
+model:gender = chunks.audio.compare.gender.gold.linsvm
+model:age = chunks.audio.compare.age.gold.linsvm
 
 # vad detection
 
@@ -65,12 +65,10 @@ vad:feature_win = 0.04
 vad:feature_context = 5
 vad:feature_context_2 = 10
 vad:model = lin
-vad:model_params = -s 0 -e 0.01 -B 0.1	 
+vad:model_params = -s 0 -e 0.01 -B 0.1
 
 # emax
 
 emax:model = ../../models/face/caffe.cfg            # emax model path
 emax:faces:max    = 1  								# number of faces to detect (0 = always nearest, otherwise 4 at max)
 emax:faces:values = 168 							# number of values per face
-
-

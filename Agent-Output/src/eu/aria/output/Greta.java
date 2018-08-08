@@ -490,7 +490,7 @@ public class Greta {
     
     private static boolean updatePluginsCfg() throws IOException {
         final String HEADER = "PluginFolder=";
-        final String FILE = "Player\\Lib\\External\\Win64\\Plugins_OpenGL.cfg";
+        final String FILE = "bin\\Player\\Lib\\External\\Win64\\Plugins_OpenGL.cfg";
         final String DLL_PATH = "\\Player\\Lib\\External\\Win64\\DLL";
 
         File file = new File(FILE);

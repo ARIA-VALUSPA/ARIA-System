@@ -6,7 +6,7 @@
 	LateralRoll is leftward/rightward rotation in the lateral plan (around z axis)
 -->
 
-<!-- 
+<!--
 	In the SagittalTilt, the rotation in the backward direction correspond to a backward rotation
 						 the rotation in the forward direction correspond to a forward rotation
 
@@ -35,7 +35,6 @@
 			<LateralRoll direction="Leftward" min="0.0" max="0.0"/>
 		</KeyPoint>
 	</head>
-
 	<head id="Up" lexeme="Up">
 		<KeyPoint>
 			<SagittalTilt direction="Backward" min="0.15" max="0.15"/>
@@ -185,7 +184,7 @@
 		<KeyPoint>
 			<LateralRoll direction="Rightward" min="0.04" max="0.15"/>
 			<SagittalTilt direction="Backward" min="0.04" max="0.15"/>
-			<VerticalTorsion direction="Rightward" min="0.04" max="0.15"/> 
+			<VerticalTorsion direction="Rightward" min="0.04" max="0.15"/>
 		</KeyPoint>
 	</head>
 	<head id="pride_signal_8" lexeme="PRIDE_SIGNAL">

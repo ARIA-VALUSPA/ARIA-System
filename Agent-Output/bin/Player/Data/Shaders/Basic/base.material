@@ -14,7 +14,7 @@ material base {
 	set $sb 0
 	set $sa 1
 	set $ss 0
-	
+
 	set $scaleU 1
 	set $scaleV 1
 	set $offsetU 0
@@ -36,7 +36,6 @@ material base {
 		}
 	}
 }
-
 
 material base/alpha : base {
 	technique 0 {

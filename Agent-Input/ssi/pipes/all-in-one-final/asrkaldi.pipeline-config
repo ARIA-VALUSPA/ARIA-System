@@ -1,5 +1,5 @@
 #ASR server options
-asr:nbest =5
+asr:nbest =10
 asr:mode  =utt
 asr:language =en
 

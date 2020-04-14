@@ -6,7 +6,6 @@
         <xsd:sequence>
             <xsd:element name="torso" type="torsoType" minOccurs="1" maxOccurs="unbounded"/>
             <xsd:element name="torsoDirectionShift" type="torsoDirectionShiftType" minOccurs="1" maxOccurs="unbounded"/>
-
         </xsd:sequence>
     </xsd:complexType>
 
@@ -50,5 +49,5 @@
         <xsd:attribute name="min" type="xsd:float" use="required"/>
         <xsd:attribute name="max" type="xsd:float" use="required"/>
     </xsd:complexType>
-    
+
 </xsd:schema>

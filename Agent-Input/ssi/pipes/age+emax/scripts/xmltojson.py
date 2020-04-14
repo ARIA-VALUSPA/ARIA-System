@@ -7,7 +7,6 @@ Copyright (C) University of Augsburg, Lab for Human Centered Multimedia
 Sends mean of the second stream within series of non-zero values in the first stream.
 '''
 
-
 from xmljson import BadgerFish
 from xml.etree.ElementTree import fromstring
 from json import dumps
@@ -20,11 +19,9 @@ def getOptions(opts, vars):
     opts['convert'] = False
     opts['debug'] = False
 
-
 def getEventAddress(opts, vars):
 
     return opts['address']
-
 
 def listen_enter(opts, vars):
 
@@ -33,9 +30,8 @@ def listen_enter(opts, vars):
 
     pass
 
+def update(event, board, opts, vars):
 
-def update(event, board, opts, vars):    
-    
     try:
 
         bf = vars['bf']
@@ -52,10 +48,8 @@ def update(event, board, opts, vars):
         board.update(event.time, event.dur, opts['address'], json)
 
     except:
-        
+
         print('could not convert xml to json')
-
-
 
 def listen_flush(opts, vars):
 

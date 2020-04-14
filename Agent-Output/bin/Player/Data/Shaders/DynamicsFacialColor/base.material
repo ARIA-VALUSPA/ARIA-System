@@ -18,17 +18,15 @@ fragment_program face/dynamicfacialcolor_frag glsl
     }
 }
 
-
-
-abstract pass basicPass {	
+abstract pass basicPass {
 	// vertex_program_ref CelShadingVP {}
 	// fragment_program_ref CelShadingFP {}
 	// texture_unit tex {}
 }
 
-material base 
+material base
 {
-set $ar 0.5
+    set $ar 0.5
 	set $ag 0.5
 	set $ab 0.5
 	set $aa 1
@@ -43,33 +41,37 @@ set $ar 0.5
 	set $sb 0
 	set $sa 1
 	set $ss 0
-	
+
 	technique {
-		pass : basicPass{
+		pass : basicPass
+        {
             ambient $ar $ag $ab $aa
 			diffuse $dr $dg $db $da
 			specular $sr $sg $sb $sa $ss
 			cull_hardware none
 			cull_software none
-			texture_unit tex{
+
+            texture_unit tex
+            {
 				texture_alias diffuseMap
 				texture white.bmp
 			}
-			
-			texture_unit tex2{
+
+			texture_unit tex2
+            {
 				texture_alias diffuseMap
 				texture white.bmp
 			}
 		}
 	}
-	
 }
 
 material base_face : base
 {
-
-	technique {
-		pass : basicPass{
+	technique
+    {
+		pass : basicPass
+        {
             ambient $ar $ag $ab $aa
 			diffuse $dr $dg $db $da
 			specular $sr $sg $sb $sa $ss
@@ -89,31 +91,32 @@ material base_face : base
 				texture_alias diffuseMap
 				texture white.bmp
 			}
-			
-			texture_unit 
+
+			texture_unit
 			{
 				texture_alias bias
-				texture dynamicfacialcolor/obbadiah/bias.dds  3d
+				texture dynamicfacialcolor/obbadiah/bias.dds 3d
 			}
-			
-			texture_unit 
+
+			texture_unit
 			{
 				texture_alias scale
-				texture dynamicfacialcolor/obbadiah/scale.dds  3d
+				texture dynamicfacialcolor/obbadiah/scale.dds 3d
 			}
-			
-			texture_unit 
+
+			texture_unit
 			{
 				texture_alias hemoglobine
 				texture dynamicfacialcolor/obbadiah/hemoglobine.jpg
 			}
-       
-			texture_unit 
+
+			texture_unit
 			{
 				texture_alias melanine
 				texture dynamicfacialcolor/obbadiah/melanine.jpg
 			}
-			texture_unit 
+
+            texture_unit
 			{
 				texture_alias melanine
 				texture dynamicfacialcolor/skinTex.EXR
@@ -121,4 +124,3 @@ material base_face : base
         }
     }
 }
-

@@ -10,7 +10,7 @@ Requirements:
  - Java 8 64bit JDK (http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
  - Apache Maven (https://maven.apache.org/)
  - Apache ActiveMQ (http://activemq.apache.org/)
- 
+
 ------------------------------------
 
 Installing:
@@ -28,4 +28,4 @@ Set-up:
 	To change the QAM files (default responses and/or question-answer pairs), you need to adjust the 'ariaQAM.properties' file
 
 Running:
-Once all is set-up, you can run the DM with run.bat and end the program with pressing 'ENTER'. All conversations are stored in the /log folder. 
+Once all is set-up, you can run the DM with run.bat and end the program with pressing 'ENTER'. All conversations are stored in the /log folder.

@@ -9,7 +9,7 @@ FROM ubuntu
 		libatlas-base-dev \
 		sudo \
 		wget
-		
+
 # create a user
 USER root
 	RUN mkdir /var/ariaasr_home
@@ -25,7 +25,6 @@ USER ariaasr
 	RUN ./install-aria-asr.sh
 	RUN chmod +=rx run/launch.sh
 	RUN chmod +=rx run/launch-asr.sh
-
 
 # run the ASR server
 WORKDIR /var/ariaasr_home/run

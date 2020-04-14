@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<options>
+    <item name="path" type="CHAR" num="1024" value="log\2018-08-07_14-21-31\video.avi" lock="true" help="file path (empty for stdout)" />
+    <item name="overwrite" type="BOOL" num="1" value="false" lock="true" help="overwrite file if it already exists (otherwise a unique path will be created)" />
+    <item name="keepEmpty" type="BOOL" num="1" value="true" lock="true" help="store stream even if it is empty" />
+    <item name="compression" type="CHAR" num="1024" value="WMVideo9 Encoder DMO" lock="true" help="name of compression filter ('None' for none, if empty dialog is shown)" />
+    <item name="flip" type="BOOL" num="1" value="true" lock="true" help="flip video image" />
+    <item name="mirror" type="BOOL" num="1" value="false" lock="true" help="mirror video image" />
+    <item name="mode" type="INT" num="1" value="1" lock="true" help="interleaving mode (0=NONE, 1=CAPTURE, 2=FULL, 3=BUFFERED)" />
+</options>

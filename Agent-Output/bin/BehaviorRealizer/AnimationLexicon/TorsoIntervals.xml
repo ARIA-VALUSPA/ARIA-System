@@ -40,7 +40,7 @@
 
 	<Collapse direction="Forward">
 		<collapse_amount>
-			<min>0</min> <!--Check if we can apply a negatif value of rotation-->
+			<min>0</min> <!--Check if we can apply a negative value of rotation-->
 			<max>30</max>
 		</collapse_amount>
 	</Collapse>

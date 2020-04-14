@@ -13,7 +13,6 @@ material camera_debug_marker
 	}
 }
 
-
 material light_debug_marker
 {
 	receive_shadows off
@@ -44,6 +43,7 @@ material red
 		}
 	}
 }
+
 material green
 {
 	technique
@@ -56,6 +56,7 @@ material green
 		}
 	}
 }
+
 material blue
 {
 	technique

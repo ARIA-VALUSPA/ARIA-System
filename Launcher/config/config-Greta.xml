@@ -1,17 +1,36 @@
 <xml>
-	<process language="java" class="Agent-Output.jar" cwd="..\..\Agent-Output\bin" name="Agent Window">
-		<config file="..\..\Agent-Output\bin\Agent-Output.ini" key="Environment" separator=" = " info="Select Greta environment">
+	<process
+	language="java"
+	class="Agent-Output.jar"
+	cwd="..\..\Agent-Output\bin"
+	name="Agent Window">
+		<config
+		file="..\..\Agent-Output\bin\Agent-Output.ini"
+		key="Environment"
+		separator=" = "
+		info="Greta: Environment">
 			<option>./empty.xml</option>
 			<option>./environment-ARIADemo1.xml</option>
 			<option default="True">./environment-ARIADemo2.xml</option>
 		</config>
-		<config file="..\..\Agent-Output\bin\Agent-Output.ini" key="WhiteBoard.visible" separator=" = " info="Show ActiveMQ windows for Greta">
+
+		<config
+		file="..\..\Agent-Output\bin\Agent-Output.ini"
+		key="WhiteBoard.visible"
+		separator=" = "
+		info="Greta: ActiveMQ window visibility">
 			<option>true</option>
 			<option default="True">false</option>
 		</config>
-		<config file="..\..\Agent-Output\bin\Agent-Output.ini" key="System.animEngine" separator=" = " info="Switch animation engine">
+
+		<config
+		file="..\..\Agent-Output\bin\Agent-Output.ini"
+		key="System.animEngine"
+		separator=" = "
+		info="Animation engine">
 			<option default="True">GRETA</option>
 			<option>LIVING-ACTOR</option>
 		</config>
+
 	</process>
 </xml>

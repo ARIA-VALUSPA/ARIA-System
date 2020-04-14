@@ -8,22 +8,22 @@ elementFormDefault="qualified">
 
 <xsd:complexType name="gestuaryType">
 	<xsd:sequence>
-		<xsd:element name="gesture" type="gestureType" minOccurs="1" maxOccurs="unbounded"/>		
+		<xsd:element name="gesture" type="gestureType" minOccurs="1" maxOccurs="unbounded"/>
 	</xsd:sequence>
 </xsd:complexType>
 
 <xsd:complexType name="gestureType">
 	<xsd:sequence>
-		<xsd:element name="phase" type="phaseType" minOccurs="0" maxOccurs="unbounded"/>		
+		<xsd:element name="phase" type="phaseType" minOccurs="0" maxOccurs="unbounded"/>
 	</xsd:sequence>
 	<xsd:attribute name="id" type="xsd:string" use="required"/>
-	<xsd:attribute name="category" type="xsd:string"/>	
+	<xsd:attribute name="category" type="xsd:string"/>
 	<xsd:attribute name="hand" type="xsd:string"/>
 </xsd:complexType>
 
 <xsd:complexType name="phaseType">
 	<xsd:sequence>
-		<xsd:element name="hand" type="handType" minOccurs="0" maxOccurs="2"/>		
+		<xsd:element name="hand" type="handType" minOccurs="0" maxOccurs="2"/>
 	</xsd:sequence>
 	<xsd:attribute name="type" type="xsd:string"/>
 	<xsd:attribute name="twohanded" type="xsd:string"/>
@@ -31,7 +31,7 @@ elementFormDefault="qualified">
 
 <xsd:complexType name="Trajectory">
 	<xsd:sequence>
-		<xsd:element name="parameters" type="Parameters" minOccurs="1" maxOccurs="unbounded"/>	
+		<xsd:element name="parameters" type="Parameters" minOccurs="1" maxOccurs="unbounded"/>
 	</xsd:sequence>
 	<xsd:attribute name="type" type="xsd:string" use="required"/>
 </xsd:complexType>
@@ -47,9 +47,9 @@ elementFormDefault="qualified">
 
 <xsd:complexType name="symbolicPositionType">
 	<xsd:sequence>
-		<xsd:element name="verticalLocation" type="verticalLocationType" minOccurs="0" maxOccurs="1"/>		
-		<xsd:element name="horizontalLocation" type="horizontalLocationType" minOccurs="0" maxOccurs="1"/>		
-		<xsd:element name="frontalLocation" type="locationDistanceType" minOccurs="0" maxOccurs="1"/>	
+		<xsd:element name="verticalLocation" type="verticalLocationType" minOccurs="0" maxOccurs="1"/>
+		<xsd:element name="horizontalLocation" type="horizontalLocationType" minOccurs="0" maxOccurs="1"/>
+		<xsd:element name="frontalLocation" type="locationDistanceType" minOccurs="0" maxOccurs="1"/>
 	</xsd:sequence>
 </xsd:complexType>
 
@@ -79,57 +79,57 @@ elementFormDefault="qualified">
                 <xsd:element name="uniformPosition" type="uniformPositionType"/>
                 <xsd:element name="touchPosition" type="touchPositionType"/>
             </xsd:choice>
-		<xsd:element name="handShape" type="xsd:string" minOccurs="0" maxOccurs="1"/>		
+		<xsd:element name="handShape" type="xsd:string" minOccurs="0" maxOccurs="1"/>
 		<xsd:element name="wristOrientation" type="wristOrientationType" minOccurs="0" maxOccurs="1"/>
 	</xsd:sequence>
-	
+
 	<xsd:attribute name="side" type="xsd:string" use="required"/>
 	<xsd:attribute name="openness" type="xsd:float" default="0" />
-        
+
 	<xsd:attribute name="verticalFixed" type="xsd:boolean" default="false"/>
 	<xsd:attribute name="horizontalFixed" type="xsd:boolean" default="false"/>
 	<xsd:attribute name="frontalFixed" type="xsd:boolean" default="false"/>
 </xsd:complexType>
-	
 
 
-	<!-- List of direction values. To be completed... -->
-    <xsd:simpleType name="directionType">
-        <xsd:restriction base="xsd:string">
-            <xsd:enumeration value="OUTWARD"/>
-            <xsd:enumeration value="INWARD"/>
-            <xsd:enumeration value="AWAY"/>
-            <xsd:enumeration value="TOWARD"/>
-            <xsd:enumeration value="UP"/>
-            <xsd:enumeration value="DOWN"/>
-        </xsd:restriction>
-    </xsd:simpleType>
-	
-    <xsd:simpleType name="verticalLocationType">
-        <xsd:restriction base="xsd:string">
-            <xsd:enumeration value="YUpperEP"/>
-            <xsd:enumeration value="YUpperP"/>
-            <xsd:enumeration value="YUpperC"/>
-			<xsd:enumeration value="YCC"/>
-			<xsd:enumeration value="YLowerC"/>
-			<xsd:enumeration value="YLowerP"/>
-			<xsd:enumeration value="YLowerEP"/>
-			<xsd:enumeration value="YR"/>
-        </xsd:restriction>
-    </xsd:simpleType>
-	<!-- List of values for horizontal location.  -->			
-    <xsd:simpleType name="horizontalLocationType">
-        <xsd:restriction base="xsd:string">
-            <xsd:enumeration value="XEP"/>
-            <xsd:enumeration value="XP"/>
-            <xsd:enumeration value="XC"/>
-            <xsd:enumeration value="XCC"/>
-            <xsd:enumeration value="XOppC"/>
-			<xsd:enumeration value="XR"/>
-        </xsd:restriction>
-    </xsd:simpleType>
-	<!-- List of values for location distance.  -->	
-    <xsd:simpleType name="locationDistanceType">
+
+<!-- TODO: List of direction values. To be completed... -->
+<xsd:simpleType name="directionType">
+    <xsd:restriction base="xsd:string">
+        <xsd:enumeration value="OUTWARD"/>
+        <xsd:enumeration value="INWARD"/>
+        <xsd:enumeration value="AWAY"/>
+        <xsd:enumeration value="TOWARD"/>
+        <xsd:enumeration value="UP"/>
+        <xsd:enumeration value="DOWN"/>
+    </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="verticalLocationType">
+    <xsd:restriction base="xsd:string">
+        <xsd:enumeration value="YUpperEP"/>
+        <xsd:enumeration value="YUpperP"/>
+        <xsd:enumeration value="YUpperC"/>
+		<xsd:enumeration value="YCC"/>
+		<xsd:enumeration value="YLowerC"/>
+		<xsd:enumeration value="YLowerP"/>
+		<xsd:enumeration value="YLowerEP"/>
+		<xsd:enumeration value="YR"/>
+    </xsd:restriction>
+</xsd:simpleType>
+<!-- List of values for horizontal location.  -->
+<xsd:simpleType name="horizontalLocationType">
+    <xsd:restriction base="xsd:string">
+        <xsd:enumeration value="XEP"/>
+        <xsd:enumeration value="XP"/>
+        <xsd:enumeration value="XC"/>
+        <xsd:enumeration value="XCC"/>
+        <xsd:enumeration value="XOppC"/>
+		<xsd:enumeration value="XR"/>
+    </xsd:restriction>
+</xsd:simpleType>
+<!-- List of values for location distance.  -->
+<xsd:simpleType name="locationDistanceType">
         <xsd:restriction base="xsd:string">
             <xsd:enumeration value="ZNear"/>
             <xsd:enumeration value="ZMiddle"/>
@@ -137,5 +137,5 @@ elementFormDefault="qualified">
 			<xsd:enumeration value="ZR"/>
         </xsd:restriction>
     </xsd:simpleType>
-	
+
 </xsd:schema>

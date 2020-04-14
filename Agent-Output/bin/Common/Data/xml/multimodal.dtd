@@ -1,28 +1,30 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
-<!--- Put your DTDDoc comment here. -->
+<!--- Declare (zero or more) <multimodal> tags as child of <multimodals> tags. -->
 <!ELEMENT multimodals (multimodal)*>
 
-<!--- Put your DTDDoc comment here. -->
+<!--- Declare (zero or more) <con> tags as child of <multimodal> tags. -->
+<!--  <multimodal> has an "emotion" attribute of char data. -->
 <!ELEMENT multimodal (con)*>
 <!ATTLIST multimodal
     emotion CDATA #REQUIRED
   >
 
-
-<!--- Put your DTDDoc comment here. -->
+<!--- Declare (zero or more) <arg> tags as child of <con> tags. -->
+<!-- <con> has a "type" attribute of enumeration data,
+    and a "label" attribute of char data. -->
 <!ELEMENT con ( (arg*) )>
-
 <!ATTLIST con
     type (rightinc | included | excludes | preceded | exists | morethan | lessthan | equal | and | or | not) #REQUIRED
     label CDATA #IMPLIED
   >
 
-<!--- Put your DTDDoc comment here. -->
+<!--- Declare (zero or more) <con> tags as child of <arg> tags. -->
 <!ELEMENT arg ((con*) | EMPTY ) >
 
+<!-- <arg> has a "type" attribute of enumeration data,
+    and an "id" attribute of char data. -->
 <!ATTLIST arg
     type (start|stop) #IMPLIED
     id CDATA #IMPLIED
   >
-

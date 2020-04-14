@@ -29,7 +29,7 @@ def listen_enter(opts, vars):
 
 def parse(msg, line, header_in, opts):
 
-    # these varibles should be wset somehwere - not need here for noe, but needed for DM
+    # these varibles should be wset somehwere - not need here for now, but needed for DM
     # asr_mode = 'utt'
     # asr_nbest = 3
 

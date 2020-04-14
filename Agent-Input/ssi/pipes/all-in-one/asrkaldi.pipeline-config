@@ -3,11 +3,11 @@ show:plot = true
 show:gui = true
 
 # logging
-log:use  	= false
+log:use  	= true
 log:dir 	= log
 
 #ASR server options
-asr:nbest =5
+asr:nbest =7
 asr:mode  = utt
 asr:language = en
 
@@ -20,7 +20,7 @@ output:asjson = false
 # ASR HOST
 # asr:host	=  127.0.0.1 # localhost
 # asr:host	= 34.253.87.8 # amazon server
-asr:host	=construct.cs.nott.ac.uk
+asr:host	= localhost
 
 # ASR PORT
 # Below you can find the option for the ASR server running from Amazon
@@ -29,4 +29,4 @@ asr:host	=construct.cs.nott.ac.uk
 # asr:port = 9999 # DE, 1-best ("utt")
 # asr:port = 9998 # DE, 5-best ("utt")
 # asr:port = 9997 # DE, 1-best ("inc")
-asr:port =8888
+asr:port = 8888

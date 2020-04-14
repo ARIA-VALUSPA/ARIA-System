@@ -410,6 +410,7 @@
             </hand>
         </phase>
     </gesture>
+
     <gesture category="beat" id="Beat_Ges_B">
         <phase>
             <hand openness="1.13" side="LEFT">
@@ -914,6 +915,7 @@
             </hand>
         </phase>
     </gesture>
+
     <gesture category="certainty" id="Certain_Ges_R">
         <phase>
             <hand openness="1.5" side="RIGHT">
@@ -988,6 +990,7 @@
             </hand>
         </phase>
     </gesture>
+
     <gesture category="deictic" id="Down_Ges_R">
         <phase>
             <hand openness="0.5" side="RIGHT">
@@ -1508,6 +1511,7 @@
             </hand>
         </phase>
     </gesture>
+
     <gesture category="emotion" id="Anger_Signal_10">
         <phase>
             <hand openness="0.6799999999999997" side="RIGHT">
@@ -1894,7 +1898,9 @@
             </hand>
         </phase>
     </gesture>
+
     <gesture category="empty" id="empty"/>
+
     <gesture category="iconic" id="After_Ges_R">
         <phase>
             <hand openness="0.5" side="RIGHT">
@@ -3279,6 +3285,7 @@
             </hand>
         </phase>
     </gesture>
+
     <gesture category="performative" id="Accept_Ges_B">
         <phase>
             <hand openness="1.0" side="LEFT">
@@ -4853,6 +4860,7 @@
             </hand>
         </phase>
     </gesture>
+
     <gesture category="rest" id="Akimbo">
         <phase>
             <hand openness="1.8000000000000007" side="LEFT">
@@ -5229,6 +5237,7 @@
             </hand>
         </phase>
     </gesture>
+
     <gesture category="zzdeictic" id="Baby">
         <phase>
             <hand side="LEFT">
@@ -5343,6 +5352,7 @@
             </hand>
         </phase>
     </gesture>
+
     <gesture category="zziconic" id="Nothing">
         <phase>
             <hand side="LEFT">

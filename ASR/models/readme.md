@@ -4,10 +4,10 @@ Directory contents
 -------------------
 
 This directory contains all the ASR models necessary to run the
-scripts in the run dir. These models are created as a result of
+scripts in the `run/` directory. These models are created as a result of
 a training phase performed via Kaldi using the online-nnet2 recipe
 with "multi-splice". The same files should be stored under every
-dir dedicated for every language (i.e. en, de, and fr). Note that
+directory dedicated for every language (i.e. en, de, and fr). **Note** that
 there are no files in this folder. See our WIKI page for instructions
 on how to obtain all the necessary files.
 

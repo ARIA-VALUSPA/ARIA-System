@@ -5,88 +5,95 @@
 		<signals/>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="rheme-*">
 		<signals/>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="speech-*">
 		<signals/>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-none">
 		<signals/>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="backchannel-none">
 		<signals/>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="emphasis-none">
 		<signals/>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="certainty-none">
 		<signals/>
 		<constraints/>
 	</behaviorset>
-	
+
+
 	<!-- EMOTIONS  -->
 	<behaviorset name="emotion-panic">
 		<signals>
 			<signal id="1" name="faceexp=panic" modality="face"/>
 			<signal id="2" name="UP" modality="head"/>
 		</signals>
+
 		<constraints>
 			<core>
 				<item id="1"/>
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="emotion-fear">
 		<signals>
 			<signal id="1" name="faceexp=fear" modality="face"/>
 			<signal id="2" name="Up" modality="head"/>
 		</signals>
+
 		<constraints>
 			<core>
 				<item id="1"/>
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="emotion-anxiety">
 		<signals>
 			<signal id="1" name="faceexp=anxiety" modality="face"/>
 		</signals>
+
 		<constraints>
 			<core>
 				<item id="1"/>
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="emotion-sadness">
 		<signals>
 			<signal id="1" name="DOWN" modality="head"/>
 			<signal id="3" name="gaze=look_down" modality="face"/>
 			<signal id="4" name="faceexp=sadness" modality="face"/>
 		</signals>
+
 		<constraints>
 			<core>
 				<item id="4"/>
 			</core>
+
 			<rules>
 				<implication>
 					<ifpresent id="2"/>
 					<thenpresent id="3"/>
 				</implication>
+
 				<implication>
 					<ifpresent id="3"/>
 					<thenpresent id="2"/>
@@ -94,19 +101,19 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="emotion-envy">
-    <signals>
-      <signal id="1" name="faceexp=envy" modality="face"/>
-    </signals>
-    <constraints>
-      <core>
-      </core>
-      <rules>
-      </rules>
-    </constraints>
-  </behaviorset>
-	
+	    <signals>
+			<signal id="1" name="faceexp=envy" modality="face"/>
+	    </signals>
+
+		<constraints>
+			<core></core>
+
+			<rules></rules>
+	    </constraints>
+  	</behaviorset>
+
 	<behaviorset name="emotion-anger">
 		<signals>
 			<signal id="1" name="Up" modality="head"/>
@@ -121,6 +128,7 @@
 			<core>
 				<item id="4"/>
 			</core>
+
 			<rules>
 				<implication>
 					<ifpresent id="3"/>
@@ -129,8 +137,8 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
-	<behaviorset name="emotion-joy">			
+
+	<behaviorset name="emotion-joy">
 		<signals>
 			<signal id="1" modality="face" name="faceexp=joy"/>
 		</signals>
@@ -140,7 +148,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="emotion-joybody">
 		<signals>
 			<signal id="1" name="head=head_infront" modality="head"/>
@@ -154,7 +162,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="emotion-despair">
 		<signals>
 			<signal id="1" name="gaze=look_down" modality="face">
@@ -164,6 +172,7 @@
 			<signal id="2" name="faceexp=despair" modality="face" max="6.0"/>
 			<signal id="3" name="DOWN" modality="head" max="6.0"/>
 		</signals>
+
 		<constraints>
 			<core>
 				<item id="2"/>
@@ -176,7 +185,7 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="emotion-disgust">
 		<signals>
 			<signal id="1" name="faceexp=disgust" modality="face"/>
@@ -187,7 +196,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="emotion-hate">
 		<signals>
 			<signal id="1" name="faceexp=hate" modality="face"/>
@@ -199,45 +208,49 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="emotion-worried">
 		<signals>
 			<signal id="1" name="faceexp=worry" modality="face"/>
 		</signals>
+
 		<constraints>
 			<core>
 				<item id="1"/>
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="emotion-disappointment">
 		<signals>
 			<signal id="1" name="faceexp=disappointment" modality="face"/>
 		</signals>
-		<constraints>
-			<core>
-				<item id="1"/>
-			</core>
-		</constraints>
-	</behaviorset>.
-	
-	<behaviorset name="emotion-neutral">
-		<signals>
-			<signal id="1" name="faceexp=neutral" modality="face"/>
-		</signals>
+
 		<constraints>
 			<core>
 				<item id="1"/>
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
+	<behaviorset name="emotion-neutral">
+		<signals>
+			<signal id="1" name="faceexp=neutral" modality="face"/>
+		</signals>
+
+		<constraints>
+			<core>
+				<item id="1"/>
+			</core>
+		</constraints>
+	</behaviorset>
+
 	<behaviorset name="emotion-pride">
 		<signals>
 			<signal id="1" name="faceexp=pride" modality="face"/>
 			<signal id="2" name="UP" modality="head"/>
 		</signals>
+
 		<constraints>
 			<core>
 				<item id="1"/>
@@ -245,18 +258,19 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="emotion-tension">
 		<signals>
 			<signal id="1" name="faceexp=tension" modality="face"/>
 		</signals>
+
 		<constraints>
 			<core>
 				<item id="1"/>
 			</core>
 		</constraints>
-	</behaviorset>.
-	
+	</behaviorset>
+
 	<behaviorset name="emotion-relief">
 		<signals>
 			<signal id="1" name="faceexp=relief" modality="face"/>
@@ -264,6 +278,7 @@
 				<alternative name="Up_Aside_Right" probability="0.5"/>
 			</signal>
 		</signals>
+
 		<constraints>
 			<core>
 				<item id="1"/>
@@ -271,7 +286,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="emotion-embarrassment">
 		<signals>
 			<signal id="1" name="gaze=look_down" modality="face">
@@ -283,6 +298,7 @@
 				<alternative name="Aside_Right" probability="0.5"/>
 			</signal>
 		</signals>
+
 		<constraints>
 			<core>
 				<item id="2"/>
@@ -295,18 +311,19 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="emotion-surprise">
 		<signals>
 			<signal id="1" name="faceexp=surprise" modality="face"/>
 		</signals>
+
 		<constraints>
 			<core>
 				<item id="1"/>
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="emotion-bored">
 		<signals>
 			<signal id="1" name="Aside_Right" modality="head">
@@ -314,6 +331,7 @@
 			</signal>
 			<signal id="2" name="faceexp=boredom" modality="face"/>
 		</signals>
+
 		<constraints>
 			<core>
 				<item id="1"/>
@@ -321,7 +339,8 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
+
 	<!-- DEICTICS -->
 	<behaviorset name="deictic-you">
 		<signals>
@@ -329,13 +348,14 @@
 				<alternative name="deictic=you_Ges_R_High" probability="0.5"/>
 			</signal>
 		</signals>
+
 		<constraints>
 			<core>
 				<item id="1"/>
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="deictic-selftouch">
 		<signals>
 			<signal id="1" name="deictic=self_Pos_R" modality="gesture">
@@ -347,7 +367,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="deictic-down">
 		<signals>
 			<signal id="1" name="deictic=down_Ges_R" modality="gesture"/>
@@ -358,7 +378,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="deictic-slide">
 		<signals>
 			<signal id="1" name="deictic=slide_Ges_R" modality="gesture"/>
@@ -369,7 +389,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="deictic-move">
 		<signals>
 			<signal id="1" name="deictic=move_Ges_R" modality="gesture"/>
@@ -380,7 +400,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="deictic-index">
 		<signals>
 			<signal id="1" name="deictic=index_Ges_R" modality="gesture"/>
@@ -391,7 +411,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="deictic-onmyleft">
 		<signals>
 			<signal id="1" name="deictic=OnMyLeft_Ges_L" modality="gesture"/>
@@ -402,7 +422,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="deictic-onmyright">
 		<signals>
 			<signal id="1" name="deictic=OnMyRight_Ges_R" modality="gesture"/>
@@ -413,7 +433,8 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
+
 	<!-- ICONICS -->
 	<behaviorset name="iconic-chop">
 		<signals>
@@ -425,7 +446,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="iconic-byebye">
 		<signals>
 			<signal id="1" name="iconic=handwave_Ges_R" modality="gesture">
@@ -437,7 +458,8 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
+
 	<!-- BEATS  -->
 	<behaviorset name="beat-left">
 		<signals>
@@ -449,7 +471,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="beat-right">
 		<signals>
 			<signal id="1" name="beat=beat_Ges_R_Open" modality="gesture"/>
@@ -460,7 +482,8 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
+
 	<!-- PERFORMATIVES -->
 	<behaviorset name="performative-engaginguser">
 		<signals>
@@ -472,7 +495,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-restposeakimbo">
 		<signals>
 			<signal id="1" name="rest=Akimbo" modality="gesture"/>
@@ -483,7 +506,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-randomrestpose">
 		<signals>
 			<signal id="1" name="rest=Along" modality="gesture">
@@ -497,7 +520,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-accept">
 		<signals>
 			<signal id="1" name="Nod_Middle" modality="head">
@@ -523,7 +546,7 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-confirm">
 		<signals>
 			<signal id="1" name="nod" modality="head"/>
@@ -542,7 +565,7 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-deny">
 		<signals>
 			<signal id="1" name="Shake_Big" modality="head">
@@ -563,7 +586,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-refuse">
 		<signals>
 			<signal id="1" name="Shake_Big" modality="head">
@@ -584,7 +607,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-greet">
 		<signals>
 			<signal id="1" name="faceexp=greet" modality="face"/>
@@ -592,6 +615,7 @@
 			<signal id="3" name="gaze=look_at" modality="gaze"/>
 			<signal id="4" name="NOD" modality="head"/>
 		</signals>
+
 		<constraints>
 			<rules>
 				<implication>
@@ -601,22 +625,21 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
-	 <behaviorset name="performative-disagree">
-    <signals>
-		<signal id="1" name="faceexp=disagree" modality="face"/>
-		<signal id="2" name="Shake_Middle" modality="head">
-			<alternative name="Shake_Big" probability="0.3"/>
-			<alternative name="Shake_Small" probability="0.2"/>
-		</signal>
-    </signals>
-    <constraints>
-      <core>
-      </core>
-      <rules>
-      </rules>
-    </constraints>
-  </behaviorset>
+
+	<behaviorset name="performative-disagree">
+	    <signals>
+			<signal id="1" name="faceexp=disagree" modality="face"/>
+			<signal id="2" name="Shake_Middle" modality="head">
+				<alternative name="Shake_Big" probability="0.3"/>
+				<alternative name="Shake_Small" probability="0.2"/>
+			</signal>
+	    </signals>
+
+	    <constraints>
+      		<core></core>
+      		<rules></rules>
+    	</constraints>
+  	</behaviorset>
 
 	<behaviorset name="performative-advice">
 		<signals>
@@ -624,7 +647,7 @@
 			<signal id="2" name="Aside_Right" modality="head">
 				<alternative name="Aside_Left" probability="0.5"/>
 			</signal>
-			<signal id="3" name="deictic=Index_Ges_R_old" modality="gesture"/>			
+			<signal id="3" name="deictic=Index_Ges_R_old" modality="gesture"/>
 		</signals>
 		<constraints>
 			<core>
@@ -633,7 +656,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-agree">
 		<signals>
 			<signal id="1" name="Nod_Middle" modality="head">
@@ -652,7 +675,7 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-approve">
 		<signals>
 			<signal id="1" name="Nod_Middle" modality="head">
@@ -671,7 +694,7 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-beg">
 		<signals>
 			<signal id="1" name="Aside_Right" modality="head">
@@ -693,7 +716,7 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-incite">
 		<signals>
 			<signal id="1" name="gaze=look_at" modality="gaze"/>
@@ -712,7 +735,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-criticize">
 		<signals>
 			<signal id="1" name="gaze=look_at" modality="gaze"/>
@@ -730,7 +753,7 @@
 			</implication>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-informIGA">
 		<signals>
 			<signal id="1" name="gaze=look_at" modality="gaze"/>
@@ -742,7 +765,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-informIGA2">
 		<signals>
 			<signal id="1" name="gaze=look_at" modality="gaze"/>
@@ -754,7 +777,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-informIGA3">
 		<signals>
 			<signal id="1" name="gaze=look_at" modality="gaze"/>
@@ -766,7 +789,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-inform">
 		<signals>
 			<signal id="1" name="gaze=look_at" modality="gaze"/>
@@ -787,7 +810,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-inform2">
 		<signals>
 			<signal id="1" name="gaze=look_at" modality="gaze"/>
@@ -799,7 +822,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-announce">
 		<signals>
 			<signal id="1" name="Up" modality="head"/>
@@ -816,7 +839,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-implore">
 		<signals>
 			<signal id="1" name="Aside_Left" modality="head">
@@ -835,7 +858,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-order">
 		<signals>
 			<signal id="1" name="NodUpDown" modality="head"/>
@@ -862,7 +885,7 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-suggest">
 		<signals>
 			<signal id="1" name="faceexp=suggest" modality="face">
@@ -876,7 +899,7 @@
 				<alternative name="performative=suggest_Ges_R" probability="0.5"/>
 				<alternative name="performative=suggest_Ges_L" probability="0.5"/>
 			</signal>
-			
+
 		</signals>
 		<constraints>
 			<core>
@@ -885,7 +908,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-propose">
 		<signals>
 			<signal id="1" name="faceexp=propose" modality="face"/>
@@ -904,7 +927,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-question">
 		<signals>
 			<signal id="1" name="faceexp=raise_brows" modality="face"/>
@@ -925,7 +948,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-request">
 		<signals>
 			<signal id="1" name="faceexp=raise_brows" modality="face"/>
@@ -943,7 +966,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-recognize">
 		<signals>
 			<signal id="1" name="faceexp=raise_brows" modality="face"/>
@@ -958,7 +981,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-paraphrase">
 		<signals>
 			<signal id="1" name="faceexp=raise_brows" modality="face"/>
@@ -981,7 +1004,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-praise">
 		<signals>
 			<signal id="1" name="faceexp=raise_brows" modality="face"/>
@@ -1001,7 +1024,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-warn">
 		<signals>
 			<signal id="1" name="faceexp=warn" modality="face"/>
@@ -1013,20 +1036,21 @@
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-lookright">
 		<signals>
 			<signal id="1" name="gaze=look_right" modality="face" repetitivity="1" min="1" max="2"  probability_start="1" probability_end="1"/>
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="performative-lookleft">
 		<signals>
 			<signal id="1" name="gaze=look_left" modality="face" repetitivity="1" min="1" max="2"  probability_start="1" probability_end="1"/>
 		</signals>
 		<constraints/>
 	</behaviorset>
+
 
 	<!-- CERTAINTY -->
 	<behaviorset name="certainty-certain">
@@ -1042,7 +1066,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="certainty-uncertain">
 		<signals>
 			<signal id="1" name="Aside_Right" modality="head"/>
@@ -1073,7 +1097,8 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
+
+
 	<!-- TURNTAKING -->
 	<behaviorset name="turntaking-takefloor">
 		<signals>
@@ -1086,7 +1111,7 @@
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="turntaking-givefloor">
 		<signals>
 			<signal id="1" name="gaze=give" modality="gaze" >
@@ -1105,7 +1130,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="turntaking-*">
 		<signals>
 			<signal id="1" name="NOD" modality="head"/>
@@ -1132,8 +1157,8 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
-	
+
+
 	<!-- BELIEFS -->
 	<behaviorset name="belief-relation-enumerate">
 		<signals>
@@ -1147,7 +1172,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="belief-relation-enumerate1">
 		<signals>
 			<signal id="1" name="NodDownUp" modality="head"/>
@@ -1160,7 +1185,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="belief-relation-enumerate2">
 		<signals>
 			<signal id="1" name="NodDownUp" modality="head"/>
@@ -1173,7 +1198,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="belief-relation-enumerate3">
 		<signals>
 			<signal id="1" name="NodDownUp" modality="head"/>
@@ -1186,7 +1211,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="belief-relation-cause">
 		<signals>
 			<signal id="1" name="faceexp=raise_brows" modality="face"/>
@@ -1201,7 +1226,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="belief-relation-effect">
 		<signals>
 			<signal id="1" name="faceexp=raise_brows" modality="face"/>
@@ -1216,7 +1241,8 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
+
 	<!-- WORLDS -->
 	<behaviorset name="world-*">
 		<signals>
@@ -1231,7 +1257,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="world-object-large">
 		<signals>
 			<signal id="1" name="adjectival=large_Ges_B" modality="gesture"/>
@@ -1242,7 +1268,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="world-object-location">
 		<signals>
 			<signal id="1" name="adjectival=wipe_Ges_B" modality="gesture"/>
@@ -1253,7 +1279,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="world-object-quantity">
 		<signals>
 			<signal id="1" name="adjectival=many" modality="gesture"/>
@@ -1264,7 +1290,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="world-object-tiny">
 		<signals>
 			<signal id="1" name="adjectival=tiny" modality="gesture"/>
@@ -1275,7 +1301,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="world-object-service">
 		<signals>
 			<signal id="1" name="NOD" modality="head"/>
@@ -1283,7 +1309,7 @@
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="world-object-shape">
 		<signals>
 			<signal id="1" name="deictic=view3" modality="gesture"/>
@@ -1294,7 +1320,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="world-person-self">
 		<signals>
 			<!--signal id="1" name="NOD" modality="head"/-->
@@ -1302,7 +1328,7 @@
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="world-place-away">
 		<signals>
 			<signal id="1" name="LEFT" modality="head"/>
@@ -1311,7 +1337,7 @@
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="world-place-here">
 		<signals>
 			<signal id="1" name="NOD" modality="head"/>
@@ -1319,7 +1345,7 @@
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="world-place-hereleft">
 		<signals>
 			<signal id="1" name="NOD" modality="head"/>
@@ -1335,7 +1361,7 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="world-place-hereright">
 		<signals>
 			<signal id="1" name="NOD" modality="head"/>
@@ -1351,7 +1377,7 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="world-place-location">
 		<signals>
 			<signal id="1" name="adjectival=upright" modality="gesture"/>
@@ -1362,7 +1388,8 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
+
 	<!-- BACKCHANNELS -->
 	<behaviorset name="backchannel-agreement">
 		<signals>
@@ -1384,7 +1411,7 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="backchannel-disagreement">
 		<signals>
 			<signal id="1" name="Nod_Middle" modality="head">
@@ -1405,7 +1432,7 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="backchannel-acceptance">
 		<signals>
 			<signal id="1" name="Nod_Middle" modality="head">
@@ -1425,7 +1452,7 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="backchannel-refusal">
 		<signals>
 			<signal id="1" name="Shake_Middle" modality="head">
@@ -1447,7 +1474,7 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="backchannel-liking">
 		<signals>
 			<signal id="1" name="faceexp=liking" modality="face"/>
@@ -1459,14 +1486,14 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="backchannel-disliking">
 		<signals>
 			<signal id="1" name="faceexp=disliking" modality="face"/>
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="backchannel-understanding">
 		<signals>
 			<signal id="1" name="faceexp=understand" modality="face"/>
@@ -1480,7 +1507,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="backchannel-no_understanding">
 		<signals>
 			<signal id="1" name="faceexp=eyebrows_frown" modality="face"/>
@@ -1495,7 +1522,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="backchannel-interest">
 		<signals>
 			<signal id="1" name="faceexp=raise_brows" modality="face"/>
@@ -1515,7 +1542,7 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="backchannel-no_interest">
 		<signals>
 			<signal id="1" name="gaze=look_up_left" modality="face">
@@ -1531,7 +1558,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="backchannel-belief">
 		<signals>
 			<signal id="1" name="faceexp=propose" modality="face"/>
@@ -1545,7 +1572,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="backchannel-disbelief">
 		<signals>
 			<signal id="1" name="faceexp=doubt" modality="face">
@@ -1561,7 +1588,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="backchannel-grasp_interest">
 		<signals>
 			<signal id="1" name="faceexp=propose" modality="face"/>
@@ -1574,7 +1601,7 @@
 			</core>
 		</constraints>
 	</behaviorset>
-	
+
 	<behaviorset name="backchannel-distraction">
 		<signals>
 			<signal id="1" name="faceexp=lower_right_mouth_corner" modality="face"/>
@@ -1595,7 +1622,8 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
+
+
 	<!-- EMPHASIS -->
 	<behaviorset name="emphasis-reduced">
 		<signals>
@@ -1603,7 +1631,7 @@
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="emphasis-moderate">
 		<signals>
 			<signal id="1" name="Nod_Middle" modality="head">
@@ -1614,7 +1642,7 @@
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="emphasis-strong">
 		<signals>
 			<signal id="1" name="Nod_Big" modality="head">
@@ -1625,7 +1653,8 @@
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
+
 	<!-- PITCH ACCENTS -->
 	<behaviorset name="pitchaccent-Hstar">
 		<signals>
@@ -1637,7 +1666,7 @@
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="pitchaccent-LplusHstar">
 		<signals>
 			<signal id="1" name="DOWN_ASIDE_RIGHT" modality="head">
@@ -1648,7 +1677,7 @@
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="pitchaccent-Lstar">
 		<signals>
 			<signal id="1" name="NOD" modality="head"/>
@@ -1668,8 +1697,8 @@
 			</rules>
 		</constraints>
 	</behaviorset>
-	
-	
+
+
 	<!-- BOUNDARY -->
 	<behaviorset name="boundary-L">
 		<signals>
@@ -1683,7 +1712,7 @@
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="boundary-HL">
 		<signals>
 			<signal id="1" name="DOWN_LEFT" modality="head">
@@ -1695,7 +1724,7 @@
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="boundary-H">
 		<signals>
 			<signal id="1" name="UP_RIGHT" modality="head">
@@ -1707,7 +1736,7 @@
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="boundary-HH">
 		<signals>
 			<signal id="1" name="UP_RIGHT" modality="head">
@@ -1720,7 +1749,7 @@
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="boundary-LL">
 		<signals>
 			<signal id="1" name="DOWN_LEFT" modality="head">
@@ -1735,35 +1764,39 @@
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
 	<behaviorset name="boundary-LH">
 		<signals>
 			<signal id="1" name="UP_RIGHT" modality="head">
 				<alternative name="UP_LEFT" probability="0.3"/>
 				<alternative name="UP_ASIDE_LEFT" probability="0.2"/>
 				<alternative name="UP_ASIDE_RIGHT" probability="0.1"/>
-			</signal>  
+			</signal>
 			<signal id="2" name="gaze=look_at" modality="gaze"/>
 		</signals>
 		<constraints/>
 	</behaviorset>
-	
+
+
 	<!-- INTERRUPTIONS behaviorsets -->
 	<behaviorset name="interruption-hold">
 		<signals>
 			<signal id="1" name="faceexp=neutral" modality="face"/>
 		</signals>
+
 		<constraints>
 			<core>
 				<item id="1"/>
 			</core>
 		</constraints>
 	</behaviorset>
+
 	<behaviorset name="interruption-restpose">
 		<signals>
 			<signal id="1" name="rest=Along" modality="gesture"/>
 			<signal id="2" name="faceexp=neutral" modality="face"/>
 		</signals>
+
 		<constraints>
 			<core>
 				<item id="1"/>

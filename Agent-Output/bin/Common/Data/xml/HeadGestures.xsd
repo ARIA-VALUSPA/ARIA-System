@@ -27,7 +27,6 @@
         </xsd:sequence>
         <xsd:attribute name="id" type="xsd:string" use="required"/>
         <xsd:attribute name="target" type="xsd:string" use="optional"/>
-
     </xsd:complexType>
 
     <xsd:complexType name="KeyPointType">
@@ -38,7 +37,6 @@
         </xsd:sequence>
         <xsd:attribute name="type" type="xsd:string" use="optional"/>
     </xsd:complexType>
-
 
     <xsd:complexType name="HeadParamType">
         <xsd:attribute name="direction" type="xsd:string" use="required"/>

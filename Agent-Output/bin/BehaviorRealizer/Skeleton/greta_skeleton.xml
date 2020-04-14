@@ -1,5 +1,4 @@
-
-<!-- STIFFNESS should be small that the nodes wont jump-->
+<!-- STIFFNESS should be small so that the nodes won't jump -->
 <skeleton>
     <bones>
         <bone id="0" name="HumanoidRoot">
@@ -697,91 +696,84 @@
         <boneparent bone="r_midtarsal" parent="r_subtalar" />
         <boneparent bone="r_metatarsal" parent="r_midtarsal" />
     </bonehierarchy>
-	
-	<chain name="torsoIK" base = "sacroiliac" end ="vc7">
+
+	<chain name="torsoIK" base="sacroiliac" end="vc7">
 		<joint name="vl5" />
 		<!--joint name="vl2"/>
 		<joint name="vt7"/>
 		<joint name="vt4"/-->
 		<joint name="vt1"/>
 	</chain>
-	<chain name="leftArmIK" base = "l_shoulder" end ="l_wrist">
-		<joint name="l_acromioclavicular" mass = "10">
+	<chain name="leftArmIK" base="l_shoulder" end="l_wrist">
+		<joint name="l_acromioclavicular" mass="10">
 			<dof>
-					<x  min ="-0.02" max="0.02"/>
-					<y  min ="-0.14" max="0.14"/>
-					<z  min ="-0.1" max="0.1"/>
+				<x min="-0.02" max="0.02"/>
+				<y min="-0.14" max="0.14"/>
+				<z min="-0.1" max="0.1"/>
 			</dof>
 		</joint>
-		<joint name="l_shoulder"  mass = "100">
-				<dof>
-					<x  min ="-3.14" max="1.14"/>
-					<y  min ="-3.14" max="3.14"/>
-					<z  min ="-0" max="2"/>
-				</dof>
-			</joint> 
-		<joint name="l_elbow">
-				<dof>
-					<x  min ="-3.14" max="0"/>
-					<y  min ="-3.14" max="3.14"/>
-					<z  min ="-0.01" max="0.01"/>
-				</dof>
-		</joint> 
-		<joint name="l_wrist" >
-				
-		</joint> 
-	</chain>
-	<chain name="rightArmIK" base = "r_shoulder" end ="r_wrist">
-		<joint name="r_acromioclavicular"  mass = "10">
+		<joint name="l_shoulder"  mass="100">
 			<dof>
-					<x  min ="-0.02" max="0.02"/>
-					<y  min ="-0.14" max="0.14"/>
-					<z  min ="-0.1" max="0.1"/>
+				<x min="-3.14" max="1.14"/>
+				<y min="-3.14" max="3.14"/>
+				<z min="-0" max="2"/>
 			</dof>
-		</joint> 
-		<joint name="r_shoulder" mass = "100">
-				<dof>
-					<x  min ="-3.14" max="1.14"/>
-					<y  min ="-3.14" max="3.14"/>
-					<z  min ="-3.6" max="0"/>
-				</dof>
-		</joint> 
-		<joint name="r_elbow">
-				<dof>
-					<x  min ="-3.14" max="0"/>
-					<y  min ="-3.14" max="3.14"/>
-					<z  min ="-0.01" max="0.01"/>
-				</dof>
-		</joint> 
-		<joint name="r_wrist" >
-				
-		</joint> 
+			</joint>
+		<joint name="l_elbow">
+			<dof>
+				<x min="-3.14" max="0"/>
+				<y min="-3.14" max="3.14"/>
+				<z min="-0.01" max="0.01"/>
+			</dof>
+		</joint>
+		<joint name="l_wrist"></joint>
 	</chain>
-	
-	
-	
+	<chain name="rightArmIK" base="r_shoulder" end="r_wrist">
+		<joint name="r_acromioclavicular" mass="10">
+			<dof>
+				<x min="-0.02" max="0.02"/>
+				<y min="-0.14" max="0.14"/>
+				<z min="-0.1" max="0.1"/>
+			</dof>
+		</joint>
+		<joint name="r_shoulder" mass="100">
+			<dof>
+				<x min="-3.14" max="1.14"/>
+				<y min="-3.14" max="3.14"/>
+				<z min="-3.6" max="0"/>
+			</dof>
+		</joint>
+		<joint name="r_elbow">
+			<dof>
+				<x min="-3.14" max="0"/>
+				<y min="-3.14" max="3.14"/>
+				<z min="-0.01" max="0.01"/>
+			</dof>
+		</joint>
+		<joint name="r_wrist"></joint>
+	</chain>
+
 	<symblicposition>
-	<x>
-		<XEP>-45.0</XEP>
-		<XP>-30</XP>
-		<XC>-15</XC>
-		<XCC>-10.0</XCC>
-		<XOppC>10.0</XOppC>
-	</x>
-	<y>
-		<YUpperEP>80</YUpperEP>
-		<YUpperP>60</YUpperP>
-		<YUpperC>40</YUpperC>
-		<YCC>30</YCC>
-		<YLowerC>20</YLowerC>
-		<YLowerP>10</YLowerP>
-		<YLowerEP>0</YLowerEP>
-	</y>
-	<z>
-		<ZNear>25</ZNear>
-		<ZMiddle>35</ZMiddle>
-		<ZFar>45</ZFar>
-	</z>
+    	<x>
+    		<XEP>-45.0</XEP>
+    		<XP>-30</XP>
+    		<XC>-15</XC>
+    		<XCC>-10.0</XCC>
+    		<XOppC>10.0</XOppC>
+    	</x>
+    	<y>
+    		<YUpperEP>80</YUpperEP>
+    		<YUpperP>60</YUpperP>
+    		<YUpperC>40</YUpperC>
+    		<YCC>30</YCC>
+    		<YLowerC>20</YLowerC>
+    		<YLowerP>10</YLowerP>
+    		<YLowerEP>0</YLowerEP>
+    	</y>
+    	<z>
+    		<ZNear>25</ZNear>
+    		<ZMiddle>35</ZMiddle>
+    		<ZFar>45</ZFar>
+    	</z>
 	</symblicposition>
-	
 </skeleton>

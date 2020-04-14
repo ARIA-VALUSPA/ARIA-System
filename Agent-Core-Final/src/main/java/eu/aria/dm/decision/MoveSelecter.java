@@ -11,6 +11,7 @@ public class MoveSelecter {
 
     public MoveSelecter(){
         // Moet checktemplates aanroepen op een subtree van de move, waarbij
+        // Must check templates invoking a subtree of the move.
     }
 
 

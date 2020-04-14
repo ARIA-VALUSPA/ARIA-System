@@ -141,7 +141,6 @@ material camille_wrinkles
     }
 }
 
-
 material laure_wrinkles
 {
     receive_shadows on

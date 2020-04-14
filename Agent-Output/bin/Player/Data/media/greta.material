@@ -14,6 +14,7 @@ material greta_skin : base {
 	set $sb 0.5
 	set $ss 10
 }
+
 material greta_face : base {
 	set $sr 0.2
 	set $sg 0.2
@@ -24,7 +25,6 @@ material greta_face : base {
 }
 
 material hair : base {
-
 	set $ar 0.092
 	set $ag 0.053
 	set $ab 0.029
@@ -39,13 +39,10 @@ material hair : base {
 	set $ss 10
 }
 
-material hair_red_head
-{
+material hair_red_head {
 	receive_shadows on
-	technique
-	{
-		pass
-		{
+	technique {
+		pass {
 			ambient 0.24 0.15 0.05 1.0
 			diffuse 0.48 0.24 0.08 1.0
 			specular 0.2 0.2 0.2 10
@@ -62,18 +59,14 @@ material lipstick : base {
 	set_texture_alias celShadingMap greta/greta_face.png
 }
 
-material lipstick_red
-{
+material lipstick_red {
 	receive_shadows on
-	technique
-	{
-		pass
-		{
+	technique {
+		pass {
 			ambient 0.5 0.5 0.5 1
 			diffuse 0.3 0.0 0.1 1
 			specular 0.5 0.5 0.5 30
-			texture_unit
-			{
+			texture_unit {
 				texture greta/greta_face.png
 				colour_op modulate
 			}
@@ -190,42 +183,33 @@ material greta_sole : base {
 	set $ss 1
 }
 
-material body_materials1
-{
+material body_materials1 {
 	receive_shadows on
-	technique
-	{
-		pass
-		{
+	technique {
+		pass {
 			ambient 0.5 0.5 0.5 1.0
 			diffuse 0.8 0.8 0.8 1.0
 			specular 0.3 0.3 0.3 3
 			//cull_hardware none
 			//cull_software none
-			texture_unit
-			{
+			texture_unit {
 				texture greta/body_materials1.jpg
 				colour_op modulate
 			}
 		}
 	}
-
 }
 
-material body_materials2
-{
+material body_materials2 {
 	receive_shadows on
-	technique
-	{
-		pass
-		{
+	technique {
+		pass {
 			ambient 0.5 0.5 0.5 1.0
 			diffuse 0.8 0.8 0.8 1.0
 			specular 0.3 0.3 0.3 3
 			cull_hardware none
 			cull_software none
-			texture_unit
-			{
+			texture_unit {
 				texture greta/body_materials2.jpg
 				colour_op modulate
 			}
@@ -233,20 +217,16 @@ material body_materials2
 	}
 }
 
-material body_materials3
-{
+material body_materials3 {
 	receive_shadows on
-	technique
-	{
-		pass
-		{
+	technique {
+		pass {
 			ambient 0.5 0.5 0.5 1.0
 			diffuse 0.8 0.8 0.8 1.0
 			specular 0.3 0.3 0.3 3
 			cull_hardware none
 			cull_software none
-			texture_unit
-			{
+			texture_unit {
 				texture greta/body_materials3.jpg
 				colour_op modulate
 			}
@@ -254,20 +234,16 @@ material body_materials3
 	}
 }
 
-material body_materials4
-{
+material body_materials4 {
 	receive_shadows on
-	technique
-	{
-		pass
-		{
+	technique {
+		pass {
 			ambient 0.5 0.5 0.5 1.0
 			diffuse 0.8 0.8 0.8 1.0
 			specular 0.3 0.3 0.3 3
 			cull_hardware none
 			cull_software none
-			texture_unit
-			{
+			texture_unit {
 				texture greta/body_materials4.jpg
 				colour_op modulate
 			}
